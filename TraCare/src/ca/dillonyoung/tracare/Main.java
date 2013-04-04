@@ -1,33 +1,49 @@
 package ca.dillonyoung.tracare;
 
 
-import android.app.ActionBar;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.NavUtils;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+import android.util.Log;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
-import android.widget.TextView;
 
+@SuppressWarnings("deprecation")
 public class Main extends TabActivity {
 
+	// Declare the preferences data source and class
+	public static PreferencesDataSource datasourcePreferences;
+	public static Preferences preferences;
+	
+	// Declare the user details data source and class
+	public static UserDetailsDataSource dataSourceUserDetails;
+	public static UserDetails userdetails;
+	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
  
+		// Set the preference data source and load the data
+		try {
+			datasourcePreferences = new PreferencesDataSource(this);
+			datasourcePreferences.open();
+			preferences = datasourcePreferences.readPreferences();
+		} catch (Exception ex) {
+			System.err.println("Exception " + ex.getMessage());
+		}
+		
+		// Set the user detail data source and load the data
+		try {
+			dataSourceUserDetails = new UserDetailsDataSource(this);
+			dataSourceUserDetails.open();
+			userdetails = dataSourceUserDetails.readUserDetails();
+		} catch (Exception ex) {
+			System.err.println("Exception " + ex.getMessage());
+		}
+        
         TabHost tabHost = getTabHost();
  
         // Tab for Entry List
@@ -50,10 +66,25 @@ public class Main extends TabActivity {
         specPreferences.setContent(preferencesIntent);
  
         // Adding all TabSpec to TabHost
-        tabHost.addTab(specEntryList); // Adding photos tab
-        tabHost.addTab(specSummary); // Adding songs tab
-        tabHost.addTab(specPreferences); // Adding videos tab
+        tabHost.addTab(specEntryList); 
+        tabHost.addTab(specSummary); 
+        tabHost.addTab(specPreferences);
     }
 
-
+	protected void onResume() {
+		
+		// Open the data sources when the activity resumes
+		datasourcePreferences.open();
+		dataSourceUserDetails.open();
+		super.onResume();
+	}
+	
+	protected void onPause() {
+		
+		// Close the data sources when the activity is paused
+		datasourcePreferences.close();
+		dataSourceUserDetails.close();
+		super.onPause();
+		Log.v("TraCare", "Pause");
+	}
 }

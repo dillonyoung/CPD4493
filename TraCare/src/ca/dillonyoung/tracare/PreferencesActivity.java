@@ -1,5 +1,7 @@
 package ca.dillonyoung.tracare;
 
+import java.text.DecimalFormat;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,8 +15,7 @@ import android.widget.Toast;
 
 public class PreferencesActivity extends Activity {
 
-	private PreferencesDataSource datasource;
-	private Preferences preferences;
+
 	
 	// Create the references for the widgets
 	private EditText txtUserName;
@@ -33,15 +34,6 @@ public class PreferencesActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.preferences);
 		
-		// Set the preference data source for the view and load the data
-		try {
-			datasource = new PreferencesDataSource(this);
-			datasource.open();
-			preferences = datasource.readPreferences();
-		} catch (Exception ex) {
-			System.out.println("Exception " + ex.getMessage());
-		}
-		
 		// Associate the widgets with the references
 		txtUserName = (EditText)findViewById(R.id.txtUserName);
 		txtUserWeight = (EditText)findViewById(R.id.txtUserWeight);
@@ -56,12 +48,22 @@ public class PreferencesActivity extends Activity {
 		btnSave = (Button)findViewById(R.id.btnSave);
 		
 		// Update the check state for the switches
-		switchWeight.setChecked(preferences.getWeight());
-		switchSleep.setChecked(preferences.getSleep());
-		switchEnergyLevel.setChecked(preferences.getEnergyLevel());
-		switchFitness.setChecked(preferences.getFitness());
-		switchNutrition.setChecked(preferences.getNutrition());
-		switchSymptom.setChecked(preferences.getSymptom());
+		switchWeight.setChecked(Main.preferences.getWeight());
+		switchSleep.setChecked(Main.preferences.getSleep());
+		switchEnergyLevel.setChecked(Main.preferences.getEnergyLevel());
+		switchFitness.setChecked(Main.preferences.getFitness());
+		switchNutrition.setChecked(Main.preferences.getNutrition());
+		switchSymptom.setChecked(Main.preferences.getSymptom());
+		
+		// Update the user details
+		DecimalFormat format = new DecimalFormat("###.00");
+		txtUserName.setText(Main.userdetails.getName());
+		txtUserWeight.setText(format.format(Main.userdetails.getWeight()));
+		if (Main.userdetails.getGender() == 1) {
+			radMale.setChecked(true);
+		} else {
+			radFemale.setChecked(true);
+		}
 		
 		// Set the on click listener for the save button
 		btnSave.setOnClickListener(new View.OnClickListener() {
@@ -79,23 +81,27 @@ public class PreferencesActivity extends Activity {
 				preferences.setNutrition(switchNutrition.isChecked());
 				preferences.setSymptom(switchSymptom.isChecked());
 				
-				// Save the preferences
-				datasource.savePreferences(preferences);
+				// Save the changes to the preferences
+				Main.datasourcePreferences.savePreferences(preferences);
+				Main.preferences = preferences;
+				
+				// Gather the user detail information
+				UserDetails userdetails = new UserDetails();
+				userdetails.setName(txtUserName.getText().toString());
+				if (radMale.isChecked()) {
+					userdetails.setGender(1);
+				} else {
+					userdetails.setGender(2);
+				}
+				userdetails.setWeight(Float.parseFloat(txtUserWeight.getText().toString()));
+				
+				// Save the changes to the user details
+				Main.dataSourceUserDetails.saveUserDetails(userdetails);
+				Main.userdetails = userdetails;
 				
 				// Create a toast message to inform the user the settings have been saved
 				Toast.makeText(getBaseContext(), "The settings have been saved", Toast.LENGTH_SHORT).show();
 			}
 		});
-	}
-	
-	protected void onResume() {
-		datasource.open();
-		super.onResume();
-	}
-	
-	protected void onPause() {
-		datasource.close();
-		super.onPause();
-		Log.v("TraCare", "Pause");
 	}
 }

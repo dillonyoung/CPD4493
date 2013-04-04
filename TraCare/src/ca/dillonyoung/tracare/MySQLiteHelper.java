@@ -8,7 +8,7 @@ import android.util.Log;
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
 	private static final String DATABASE_NAME = "tracare.db";
-	private static final int DATABASE_VERSION = 2;
+	private static final int DATABASE_VERSION = 3;
 	
 	public MySQLiteHelper(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -46,6 +46,10 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 		
 		sqlQuery = "INSERT INTO preferences (weight, sleep, energy_level, quality_of_sleep, fitness, nutrition, symptom) VALUES(1, 1, 1, 1, 1, 1, 1)";
 		database.execSQL(sqlQuery);
+		
+		sqlQuery = "INSERT INTO user_details (name, gender, weight) VALUES('User', 1, 100.0)";
+		database.execSQL(sqlQuery);
+		
 		Log.v("TraCare", "Creating");
 	}
 	
