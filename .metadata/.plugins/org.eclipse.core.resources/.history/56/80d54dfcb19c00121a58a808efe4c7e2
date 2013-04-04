@@ -1,0 +1,12 @@
+package ca.dillonyoung.tracare;
+
+import android.database.sqlite.SQLiteDatabase;
+
+public class PreferencesDataSource {
+
+	private SQLiteDatabase database;
+	private MySQLiteHelper dbHelper;
+	private String[] allColumns = { "weight", "sleep", "energy_level", "quality_of_sleep", "fitness", "nutrition", "symptom" };
+	
+	
+}

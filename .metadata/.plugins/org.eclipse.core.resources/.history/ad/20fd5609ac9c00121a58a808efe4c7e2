@@ -1,0 +1,19 @@
+package ca.dillonyoung.tracare;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+
+public class SplashActivity extends Activity {
+
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.splash);
+		
+		// Get a reference to the image view
+		ImageView imgSplash = (ImageView)findViewById(R.id.imgLogo);
+		
+		imgSplash.startAnimation(AnimationUtils.loadAnimation(context, id))
+	}
+}

@@ -14,19 +14,19 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="ca.dillonyoung.tracare.Main"
-            android:label="@string/app_name" >
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+        <activity android:name="ca.dillonyoung.tracare.Main" >
+        </activity>
         <activity android:name=".EntryListActivity" />
-        
         <activity android:name=".SummaryActivity" />
-        
         <activity android:name=".PreferencesActivity" />
     </application>
 

@@ -25,3 +25,5 @@
 1364851033403	Encapsulate field 'symptom'
 1364851048800	Encapsulate field 'symptom_description'
 1364863400388	Change Layout
+1365023372311	Extracts string 'null' into R.string.savesettings
+1365035821122	Encapsulate field 'weight'

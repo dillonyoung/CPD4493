@@ -2,21 +2,20 @@ package ca.dillonyoung.tracare;
 
 public class Preferences {
 
-	private boolean id;
+	private boolean weight;
 	private boolean sleep;
 	private boolean energy_level;
 	private boolean quality_of_sleep;
 	private boolean fitness;
 	private boolean nutrition;
 	private boolean symptom;
-	private int default_unit;
 	
-	public boolean getId() {
-		return id;
+	public boolean getWeight() {
+		return weight;
 	}
-	public void setId(boolean id) {
-		this.id = id;
-	}
+	public void setWeight(boolean weight) {
+		this.weight = weight;
+	}	
 	public boolean getSleep() {
 		return sleep;
 	}
@@ -53,12 +52,6 @@ public class Preferences {
 	public void setSymptom(boolean symptom) {
 		this.symptom = symptom;
 	}
-	public int getDefaultUnit() {
-		return default_unit;
-	}
-	public void setDefaultUnit(int default_unit) {
-		this.default_unit = default_unit;
-	}
-	
+
 	
 }

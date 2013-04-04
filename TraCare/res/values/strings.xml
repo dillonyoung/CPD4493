@@ -10,7 +10,7 @@
     <string name="gender">Gender</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
-    <string name="weight">Weight</string>
+    <string name="weight">Weight (Lbs)</string>
     <string name="preferences">Preferences</string>
     <string name="track_weight">Track Weight</string>
     <string name="track_sleep">Track Sleep</string>
@@ -18,5 +18,8 @@
     <string name="track_quality_of_sleep">Track Quality of Sleep</string>
     <string name="track_fitness">Track Fitness</string>
     <string name="track_nutrition">Track Nutrition</string>
+    <string name="savesettings">Save Settings</string>
+    <string name="yourname">Your name</string>
+    <string name="track_symptom">Track Symptom</string>
 
 </resources>

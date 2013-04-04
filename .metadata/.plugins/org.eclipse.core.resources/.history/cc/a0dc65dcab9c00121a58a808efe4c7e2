@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alpha
+    android:duration="7000"
+    android:fromAlpha="1.0"
+    android:repeatCount="infinite"
+    android:repeatMode="restart"
+    android:toAlpha="0.3" >
+
+</alpha>
