@@ -8,7 +8,7 @@ import android.util.Log;
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
 	private static final String DATABASE_NAME = "tracare.db";
-	private static final int DATABASE_VERSION = 3;
+	private static final int DATABASE_VERSION = 4;
 	
 	public MySQLiteHelper(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -35,13 +35,13 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 		sqlQuery = "CREATE TABLE user_details (name TEXT NOT NULL, gender INT NOT NULL, weight FLOAT NOT NULL)";
 		database.execSQL(sqlQuery);
 		
-		sqlQuery = "CREATE TABLE symptom_types (id INT NOT NULL PRIMARY KEY, symptom_description TEXT NOT NULL)";
+		sqlQuery = "CREATE TABLE symptom_types (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT , symptom_description TEXT NOT NULL)";
 		database.execSQL(sqlQuery);
 		
-		sqlQuery = "CREATE TABLE locations (id INT NOT NULL PRIMARY KEY, latitude FLOAT NOT NULL, longitude FLOAT NOT NULL)";
+		sqlQuery = "CREATE TABLE locations (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, latitude FLOAT NOT NULL, longitude FLOAT NOT NULL)";
 		database.execSQL(sqlQuery);
 		
-		sqlQuery = "CREATE TABLE entries (id INT NOT NULL PRIMARY KEY, dateentered DATETIME NOT NULL, location INT NOT NULL, weight FLOAT, hours_sleep FLOAT, energy_level INT, quality_of_sleep INT, fitness TEXT, nutrition TEXT, symptom INT, symptom_description TEXT)";
+		sqlQuery = "CREATE TABLE entries (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, dateentered DATETIME NOT NULL, location INT NOT NULL, weight FLOAT, hours_sleep FLOAT, energy_level INT, quality_of_sleep INT, fitness TEXT, nutrition TEXT, symptom INT, symptom_description TEXT)";
 		database.execSQL(sqlQuery);
 		
 		sqlQuery = "INSERT INTO preferences (weight, sleep, energy_level, quality_of_sleep, fitness, nutrition, symptom) VALUES(1, 1, 1, 1, 1, 1, 1)";

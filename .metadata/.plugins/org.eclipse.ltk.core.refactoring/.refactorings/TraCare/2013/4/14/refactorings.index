@@ -31,3 +31,4 @@
 1365040583341	Encapsulate field 'gender'
 1365040592689	Encapsulate field 'weight'
 1365041464297	Rename local variable 'preferences'
+1365045866756	Extracts string 'null' into R.string.image

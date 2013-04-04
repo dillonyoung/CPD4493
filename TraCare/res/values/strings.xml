@@ -21,5 +21,6 @@
     <string name="savesettings">Save Settings</string>
     <string name="yourname">Your name</string>
     <string name="track_symptom">Track Symptom</string>
+    <string name="image"></string>
 
 </resources>

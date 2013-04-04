@@ -6000,3 +6000,6 @@ java.lang.IllegalStateException: startLine (39) does not match endLine (38)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2013-04-03 23:24:32.795
+!MESSAGE splash.xml: Couldn't resolve resource @string/image
