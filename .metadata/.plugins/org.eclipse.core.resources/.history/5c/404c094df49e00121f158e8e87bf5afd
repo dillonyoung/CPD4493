@@ -84,7 +84,6 @@ public class EntriesDataSource {
 	public void deleteEntry(float id) {
 		
 		int rows = database.delete("entries", "id=" + id, null);
-		System.err.println("ID: "+ id);
 		System.err.println("Rows: " + rows);
 	}
 }
