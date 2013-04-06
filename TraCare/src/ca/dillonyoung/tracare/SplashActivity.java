@@ -19,7 +19,12 @@ public class SplashActivity extends Activity {
 		// Begin the animation
 		imgSplash.startAnimation(AnimationUtils.loadAnimation(this,
 				R.anim.alpha));
-
+	}
+	
+	public void onResume() {
+		
+		super.onResume();
+		
 		// Start the main activity
 		Handler handler = new Handler(); 
 		

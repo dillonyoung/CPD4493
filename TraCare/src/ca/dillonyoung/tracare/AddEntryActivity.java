@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Gallery;
 import android.widget.Spinner;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,7 +34,51 @@ public class AddEntryActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.addentry);
-
+		
+		// Check to see if the weight entry should be tracked
+		if (!Main.preferences.getWeight()) {
+			TableRow row = (TableRow) findViewById(R.id.rowAddEntryWeight);
+			row.setVisibility(View.GONE);
+		}
+		
+		// Check to see if the hours of sleep entry should be tracked
+		if (!Main.preferences.getSleep()) {
+			TableRow row = (TableRow) findViewById(R.id.rowAddEntryHours);
+			row.setVisibility(View.GONE);
+		}
+		
+		// Check to see if the quality of sleep entry should be tracked
+		if (!Main.preferences.getQualityOfSleep()) {
+			TableRow row = (TableRow) findViewById(R.id.rowAddEntryQualityofSleep);
+			row.setVisibility(View.GONE);
+		}
+		
+		// Check to see if the energy level entry should be tracked
+		if (!Main.preferences.getEnergyLevel()) {
+			TableRow row = (TableRow) findViewById(R.id.rowAddEntryEnergyLevel);
+			row.setVisibility(View.GONE);
+		}
+		
+		// Check to see if the fitness entry should be tracked
+		if (!Main.preferences.getFitness()) {
+			TableRow row = (TableRow) findViewById(R.id.rowAddEntryFitness);
+			row.setVisibility(View.GONE);
+		}
+		
+		// Check to see if the nutrition entry should be tracked
+		if (!Main.preferences.getNutrition()) {
+			TableRow row = (TableRow) findViewById(R.id.rowAddEntryNutrition);
+			row.setVisibility(View.GONE);
+		}
+		
+		// Check to see if the symptom entry should be tracked
+		if (!Main.preferences.getSymptom()) {
+			TableRow row1 = (TableRow) findViewById(R.id.rowAddEntrySymptom);
+			row1.setVisibility(View.GONE);
+			TableRow row2 = (TableRow) findViewById(R.id.rowAddEntrySymptomDescription);
+			row2.setVisibility(View.GONE);
+		}
+		
 		// Create a reference to the hour of sleep spinner and associate the string array
 		spinHours = (Spinner)findViewById(R.id.spinHours);
 		ArrayAdapter<CharSequence> adapterHours = ArrayAdapter.createFromResource(this, R.array.hours_of_sleep, android.R.layout.simple_spinner_item);
@@ -84,43 +129,108 @@ public class AddEntryActivity extends Activity {
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				
-				// Check to see if the weight value has been entered
-				if (txtWeight.getText().toString().length() == 0) {
+				float weight;
+				float sleep;
+				float qualityofsleep;
+				float energylevel;
+				float symptom;
+				String symptomdescription;
+				String fitness;
+				String nutrition;
+				
+				// Check to see if the weight is being tracked
+				if (Main.preferences.getWeight()) {
+					
+					// Check to see if the weight value has been entered
+					if (txtWeight.getText().toString().length() == 0) {
 
-					// Create a toast message to inform the user the weight is
-					// not valid
-					Toast.makeText(getBaseContext(),
-							"The weight value is not valid",
-							Toast.LENGTH_SHORT).show();
-					return;
+						// Create a toast message to inform the user the weight is
+						// not valid
+						Toast.makeText(getBaseContext(),
+								"The weight value is not valid",
+								Toast.LENGTH_SHORT).show();
+						return;
+					}
+					
+					// Check to see if the weight has not been entered
+					if (Float.parseFloat(txtWeight.getText().toString()) < 1.0) {
+
+						// Create a toast message to inform the user the weight is
+						// not valid
+						Toast.makeText(getBaseContext(),
+								"The weight value is not valid", Toast.LENGTH_SHORT)
+								.show();
+						return;
+					}
+					
+					weight = Float.parseFloat(txtWeight.getText().toString());
+				} else {
+					weight = -1;
 				}
 				
-				// Check to see if the weight has not been entered
-				if (Float.parseFloat(txtWeight.getText().toString()) < 1.0) {
-
-					// Create a toast message to inform the user the weight is
-					// not valid
-					Toast.makeText(getBaseContext(),
-							"The weight value is not valid", Toast.LENGTH_SHORT)
-							.show();
-					return;
+				// Check to see if the hours of sleep is being tracked
+				if (Main.preferences.getSleep()) {
+					sleep = spinHours.getSelectedItemPosition();
+				} else {
+					sleep = -1;
 				}
+				
+				// Check to see if the quality of sleep is being tracked
+				if (Main.preferences.getQualityOfSleep()) {
+					qualityofsleep = spinEnergyLevel.getSelectedItemId();
+				} else {
+					qualityofsleep = -1;
+				}
+				
+				// Check to see if the energy level is being tracked
+				if (Main.preferences.getEnergyLevel()) {
+					energylevel = spinEnergyLevel.getSelectedItemId();
+				} else {
+					energylevel = -1;
+				}
+				
+				// Check to see if the fitness activity is being tracked
+				if (Main.preferences.getFitness()) {
+					fitness = txtFitness.getText().toString();
+				} else {
+					fitness = "<{[blank]}>";
+				}
+				
+				// Check to see if the nutrition is being tracked
+				if (Main.preferences.getNutrition()) {
+					nutrition = txtNutrition.getText().toString();
+				} else {
+					nutrition = "<{[blank]}>";
+				}
+				
+				// Check to see if the symptom is being tracked
+				if (Main.preferences.getSymptom()) {
+					symptom = spinSymptomType.getSelectedItemId();
+					symptomdescription = txtSymptomDescription.getText().toString();
+				} else {
+					symptom = -1;
+					symptomdescription = "<{[blank]}>";
+				}
+				
 				
 				// Create a new entry object
 				Entries entry = new Entries();
 				
 				entry.setDateEntered(System.currentTimeMillis());
 				entry.setLocation(0);
-				entry.setWeight(Float.parseFloat(txtWeight.getText().toString()));
-				entry.setHoursSleep(spinHours.getSelectedItemPosition());
-				entry.setQualityOfSleep(spinEnergyLevel.getSelectedItemId());
-				entry.setFitness(txtFitness.getText().toString());
-				entry.setNutrition(txtNutrition.getText().toString());
-				entry.setSymptom(spinSymptomType.getSelectedItemId());
-				entry.setSymptomDescription(txtSymptomDescription.getText().toString());
+				entry.setWeight(weight);
+				entry.setHoursSleep(sleep);
+				entry.setQualityOfSleep(qualityofsleep);
+				entry.setEnergyLevel(energylevel);
+				entry.setFitness(fitness);
+				entry.setNutrition(nutrition);
+				entry.setSymptom(symptom);
+				entry.setSymptomDescription(symptomdescription);
 				
+				// Add the entry to the database
 				Main.datasourceEntries.addEntry(entry);
 				
+				// Close the activity
 				finish();
 			}
 		});

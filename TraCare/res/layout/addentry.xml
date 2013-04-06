@@ -23,7 +23,7 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow4"
+            android:id="@+id/rowAddEntryWeight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dip" >
@@ -38,7 +38,7 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow7"
+            android:id="@+id/rowAddEntryHours"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dip" >
@@ -52,7 +52,7 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow9"
+            android:id="@+id/rowAddEntryQualityofSleep"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dip" >
@@ -64,7 +64,7 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow8"
+            android:id="@+id/rowAddEntryEnergyLevel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dip" >
@@ -76,7 +76,7 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow10"
+            android:id="@+id/rowAddEntryFitness"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dip" >
@@ -94,7 +94,7 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow11"
+            android:id="@+id/rowAddEntryNutrition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dip" >
@@ -113,7 +113,7 @@
 
         
         <TableRow
-            android:id="@+id/tableRow12"
+            android:id="@+id/rowAddEntrySymptom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dip" >
@@ -125,7 +125,7 @@
         </TableRow>
         
         <TableRow
-            android:id="@+id/tableRow14"
+            android:id="@+id/rowAddEntrySymptomDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dip" >

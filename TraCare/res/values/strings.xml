@@ -22,6 +22,7 @@
     <string name="yourname">Your name</string>
     <string name="track_symptom">Track Symptom</string>
     <string name="image"></string>
+    <string name="blank"></string>
     <string name="menu_add_entry">Add Entry</string>
     <string name="menu_delete_entry">Delete Entry</string>
 
