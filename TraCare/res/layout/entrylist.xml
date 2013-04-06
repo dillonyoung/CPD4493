@@ -9,10 +9,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:spacing="100px"
+        android:minHeight="40sp"
         android:scrollbars="horizontal"
-        android:scrollbarFadeDuration="0"
-        android:scrollX="100px" />
+        android:spacing="100sp" />
     
     <TextView
         android:id="@+id/txtDescription"

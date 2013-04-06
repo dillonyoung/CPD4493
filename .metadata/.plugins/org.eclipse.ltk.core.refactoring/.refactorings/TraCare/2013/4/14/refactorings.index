@@ -32,3 +32,10 @@
 1365040592689	Encapsulate field 'weight'
 1365041464297	Rename local variable 'preferences'
 1365045866756	Extracts string 'null' into R.string.image
+1365202090522	Delete element
+1365206152301	Extracts string 'null' into R.string.string_new_entry
+1365206191330	Extracts string 'null' into R.string.string_hours_of_sleep
+1365206423877	Extracts string 'null' into R.string.string_fitness
+1365206450273	Extracts string 'null' into R.string.string_nutrition
+1365206690318	Extracts string 'null' into R.string.string_symtpom_description
+1365206737611	Extracts string 'null' into R.string.saveentry

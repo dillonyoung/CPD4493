@@ -1,0 +1,58 @@
+package ca.dillonyoung.tracare;
+
+import java.sql.Date;
+
+import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
+
+public class EntriesDataSource {
+
+	private SQLiteDatabase database;
+	private MySQLiteHelper dbHelper;
+	private String[] allColumns = { "id", "dateentered", "location", "weight", "hours_sleep", "energy_level", "quality_of_sleep", "fitness", "nutrition", "symptom", "symptom_description" };
+	
+	public EntriesDataSource(Context context) {
+		this.dbHelper = new MySQLiteHelper(context);
+	}
+	
+	public void open() throws SQLException {
+		this.database = this.dbHelper.getWritableDatabase();
+	}
+	
+	public void close() {
+		this.dbHelper.close();
+	}
+	
+	public ArrayList<Entries> getEntries() {
+		
+		
+		Cursor cursor = database.query("entries", allColumns, null, null, null, null, null);
+		
+		cursor.moveToFirst();
+		while (!cursor.isAfterLast()) {
+			
+			Entries entries = new Entries();
+			entries.setId(cursor.getInt(0));
+			//long msTime = System.currentTimeMillis();
+			//Date curDate = new Date(msTime);
+			entries.setDateEntered(cursor.getLong(1));
+			entries.setLocation(0);
+			entries.setWeight(weight)
+			entries.setWeight((cursor.getInt(0) != 0));
+			entries.setSleep((cursor.getInt(1) != 0));
+			entries.setEnergyLevel((cursor.getInt(2) != 0));
+			entries.setQualityOfSleep((cursor.getInt(3) != 0));
+			entries.setFitness((cursor.getInt(4) != 0));
+			entries.setNutrition((cursor.getInt(5) != 0));
+			entries.setSymptom((cursor.getInt(6) != 0));
+			cursor.moveToNext();
+		}
+		cursor.close();
+		Log.v("TraCare", "Load Preferences");
+		
+		return preferences;
+	}
+}

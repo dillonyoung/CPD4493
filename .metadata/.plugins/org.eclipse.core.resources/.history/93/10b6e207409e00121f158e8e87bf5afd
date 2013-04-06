@@ -1,0 +1,32 @@
+package ca.dillonyoung.tracare;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
+import android.widget.Gallery;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+public class AddEntryActivity extends Activity {
+
+	private Spinner spinHours;
+	
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.addentry);
+
+		spinHours = (Spinner)findViewById(R.id.spinHours);
+		ArrayAdapter<CharSequence> adapterHours = ArrayAdapter.createFromResource(this, R.array.hours_of_sleep, android.R.layout.simple_spinner_item);
+		adapterHours.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinHours.setAdapter(adapterHours);
+		spinHours.setOnItemSelectedListener(new spinHoursOnItemSelectedListener());
+	}
+}
+
+public class spinHoursOnItemSelectedListener implements OnItemSelectedListener {
+	
+}

@@ -1,17 +1,19 @@
 package ca.dillonyoung.tracare;
 
+import java.sql.Date;
+
 public class Entries {
 
 	private int id;
-	private int dateentered;
-	private int location;
+	private long dateentered;
+	private float location;
 	private float weight;
 	private float hours_sleep;
-	private int energy_level;
-	private int quality_of_sleep;
+	private float energy_level;
+	private float quality_of_sleep;
 	private String fitness;
 	private String nutrition;
-	private int symptom;
+	private float symptom;
 	private String symptom_description;
 	
 	public int getId() {
@@ -20,16 +22,16 @@ public class Entries {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getDateEntered() {
+	public long getDateEntered() {
 		return dateentered;
 	}
-	public void setDateEntered(int dateentered) {
+	public void setDateEntered(long dateentered) {
 		this.dateentered = dateentered;
 	}
-	public int getLocation() {
+	public float getLocation() {
 		return location;
 	}
-	public void setLocation(int location) {
+	public void setLocation(float location) {
 		this.location = location;
 	}
 	public float getWeight() {
@@ -44,16 +46,16 @@ public class Entries {
 	public void setHoursSleep(float hours_sleep) {
 		this.hours_sleep = hours_sleep;
 	}
-	public int getEnergyLevel() {
+	public float getEnergyLevel() {
 		return energy_level;
 	}
-	public void setEnergyLevel(int energy_level) {
+	public void setEnergyLevel(float energy_level) {
 		this.energy_level = energy_level;
 	}
-	public int getQualityOfSleep() {
+	public float getQualityOfSleep() {
 		return quality_of_sleep;
 	}
-	public void setQualityOfSleep(int quality_of_sleep) {
+	public void setQualityOfSleep(float quality_of_sleep) {
 		this.quality_of_sleep = quality_of_sleep;
 	}
 	public String getFitness() {
@@ -68,10 +70,10 @@ public class Entries {
 	public void setNutrition(String nutrition) {
 		this.nutrition = nutrition;
 	}
-	public int getSymptom() {
-		return symptom;
+	public float getSymptom() {
+		return this.symptom;
 	}
-	public void setSymptom(int symptom) {
+	public void setSymptom(float symptom) {
 		this.symptom = symptom;
 	}
 	public String getSymptomDescription() {

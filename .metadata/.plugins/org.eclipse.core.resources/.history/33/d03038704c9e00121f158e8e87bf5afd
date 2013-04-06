@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TraCare</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="user_details">User Details</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="weight">Weight (Lbs)</string>
+    <string name="preferences">Preferences</string>
+    <string name="track_weight">Track Weight</string>
+    <string name="track_sleep">Track Sleep</string>
+    <string name="track_energy_level">Track Energy Level</string>
+    <string name="track_quality_of_sleep">Track Quality of Sleep</string>
+    <string name="track_fitness">Track Fitness</string>
+    <string name="track_nutrition">Track Nutrition</string>
+    <string name="savesettings">Save Settings</string>
+    <string name="yourname">Your name</string>
+    <string name="track_symptom">Track Symptom</string>
+    <string name="image"></string>
+    <string name="menu_add_entry">Add Entry</string>
+    <string name="menu_delete_entry">Delete Entry</string>
+
+    <string-array name="hours_of_sleep">
+        <item>0.0 Hours of Sleep</item>
+        <item>0.5 Hours of Sleep</item>
+        <item>1.0 Hours of Sleep</item>
+        <item>1.5 Hours of Sleep</item>
+        <item>2.0 Hours of Sleep</item>
+        <item>2.5 Hours of Sleep</item>
+        <item>3.0 Hours of Sleep</item>
+        <item>3.5 Hours of Sleep</item>
+        <item>4.0 Hours of Sleep</item>
+        <item>4.5 Hours of Sleep</item>
+        <item>5.0 Hours of Sleep</item>
+        <item>5.5 Hours of Sleep</item>
+        <item>6.0 Hours of Sleep</item>
+        <item>6.5 Hours of Sleep</item>
+        <item>7.0 Hours of Sleep</item>
+        <item>7.5 Hours of Sleep</item>
+        <item>8.0 Hours of Sleep</item>
+        <item>8.5 Hours of Sleep</item>
+        <item>9.0 Hours of Sleep</item>
+        <item>9.5 Hours of Sleep</item>
+        <item>10.0 Hours of Sleep</item>
+        <item>10.5 Hours of Sleep</item>
+        <item>11.0 Hours of Sleep</item>
+        <item>11.5 Hours of Sleep</item>
+        <item>12.0 Hours of Sleep</item>
+        <item>12.5 Hours of Sleep</item>
+        <item>13.0 Hours of Sleep</item>
+        <item>13.5 Hours of Sleep</item>
+        <item>14.0 Hours of Sleep</item>
+        <item>14.5 Hours of Sleep</item>
+        <item>15.0 Hours of Sleep</item>
+        <item>15.5 Hours of Sleep</item>
+        <item>16.0 Hours of Sleep</item>
+        <item>16.5 Hours of Sleep</item>
+        <item>17.0 Hours of Sleep</item>
+        <item>17.5 Hours of Sleep</item>
+        <item>18.0 Hours of Sleep</item>
+        <item>18.5 Hours of Sleep</item>
+        <item>19.0 Hours of Sleep</item>
+        <item>19.5 Hours of Sleep</item>
+        <item>20.0 Hours of Sleep</item>
+        <item>20.5 Hours of Sleep</item>
+        <item>21.0 Hours of Sleep</item>
+        <item>21.5 Hours of Sleep</item>
+        <item>22.0 Hours of Sleep</item>
+        <item>22.5 Hours of Sleep</item>
+        <item>23.0 Hours of Sleep</item>
+        <item>23.5 Hours of Sleep</item>
+    </string-array>
+    <string-array name="energy_level">
+        <item>Energy Level Not Specified</item>
+        <item>Terrible Energy Level</item>
+        <item>Poor Energy Level</item>
+        <item>Average Energy Level</item>
+        <item>Good Energy Level</item>
+        <item>Excellent Energy Level</item>
+    </string-array>
+    <string-array name="quality_of_sleep">
+        <item>Quality of Sleep Not Specified</item>
+        <item>Terrible Quality of Sleep</item>
+        <item>Poor Quality of Sleep</item>
+        <item>Average Quality of Sleep</item>
+        <item>Good Quality of Sleep</item>
+        <item>Excellent Quality of Sleep</item>
+    </string-array>
+    <string-array name="symptom_type">
+        <item>Symptom Type Not Specified</item>
+        <item>Other</item>
+        <item>Abdominal Pain</item>
+        <item>Chest Pain</item>
+        <item>Constipation</item>
+        <item>Cought</item>
+        <item>Diarrea</item>
+        <item>Dizziness</item>
+        <item>Eye Discomfort</item>
+        <item>Foot Pain</item>
+        <item>Hip Pain</item>
+        <item>Knee Pain</item>
+        <item>Low Back Pain</item>
+        <item>Nasal Congestion</item>
+        <item>Nausea</item>
+        <item>Neck Pain</item>
+        <item>Numbness</item>
+        <item>Shortness of Breath</item>
+        <item>Shoulder Pain</item>
+        <item>Sore Throat</item>
+        <item>Vision Problems</item>
+        <item>Wheezing</item>
+    </string-array>
+        <string name="string_new_entry">New Entry</string>
+
+</resources>

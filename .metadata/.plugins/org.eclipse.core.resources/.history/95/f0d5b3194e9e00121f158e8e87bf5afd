@@ -1,0 +1,107 @@
+package ca.dillonyoung.tracare;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
+import android.widget.Gallery;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+public class AddEntryActivity extends Activity {
+
+	private Spinner spinHours;
+	private Spinner spinQualitySleep;
+	private Spinner spinEnergyLevel;
+	private Spinner spinSymptomType;
+	
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.addentry);
+
+		// Create a reference to the hour of sleep spinner and associate the string array
+		spinHours = (Spinner)findViewById(R.id.spinHours);
+		ArrayAdapter<CharSequence> adapterHours = ArrayAdapter.createFromResource(this, R.array.hours_of_sleep, android.R.layout.simple_spinner_item);
+		adapterHours.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinHours.setAdapter(adapterHours);
+		spinHours.setOnItemSelectedListener(new spinHoursOnItemSelectedListener());
+		
+		// Create a reference to the quality of sleep spinner and associate the string array
+		spinQualitySleep = (Spinner)findViewById(R.id.spinQualityofSleep);
+		ArrayAdapter<CharSequence> adapterQualitySleep = ArrayAdapter.createFromResource(this, R.array.quality_of_sleep, android.R.layout.simple_spinner_item);
+		adapterQualitySleep.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinQualitySleep.setAdapter(adapterQualitySleep);
+		spinQualitySleep.setOnItemSelectedListener(new spinQualitySleepOnItemSelectedListener());
+		
+		// Create a reference to the energy level spinner and associate the string array
+		spinEnergyLevel = (Spinner)findViewById(R.id.spinEnergyLevel);
+		ArrayAdapter<CharSequence> adapterEnergyLevel = ArrayAdapter.createFromResource(this, R.array.energy_level, android.R.layout.simple_spinner_item);
+		adapterEnergyLevel.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinEnergyLevel.setAdapter(adapterEnergyLevel);
+		spinEnergyLevel.setOnItemSelectedListener(new spinEnergyLevelOnItemSelectedListener());
+		
+		// Create a reference to the symptom type spinner and associate the string array
+		spinSymptomType = (Spinner)findViewById(R.id.spinSymptom);
+		ArrayAdapter<CharSequence> adapterSymptomType = ArrayAdapter.createFromResource(this, R.array.symptom_type, android.R.layout.simple_spinner_item);
+		adapterSymptomType.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinSymptomType.setAdapter(adapterSymptomType);
+		spinSymptomType.setOnItemSelectedListener(new spinSymptomTypeOnItemSelectedListener());
+	}
+}
+
+class spinHoursOnItemSelectedListener implements OnItemSelectedListener {
+
+	@Override
+	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
+			long arg3) {
+		// TODO Auto-generated method stub
+		Log.v("TraCare", arg0.getItemAtPosition(arg2).toString());
+		
+	}
+
+	@Override
+	public void onNothingSelected(AdapterView<?> arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+}
+
+class spinQualitySleepOnItemSelectedListener implements OnItemSelectedListener {
+
+	@Override
+	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
+			long arg3) {
+		// TODO Auto-generated method stub
+		Log.v("TraCare", arg0.getItemAtPosition(arg2).toString());
+		
+	}
+
+	@Override
+	public void onNothingSelected(AdapterView<?> arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+}
+
+class spinEnergyLevelOnItemSelectedListener implements OnItemSelectedListener {
+
+	@Override
+	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
+			long arg3) {
+		// TODO Auto-generated method stub
+		Log.v("TraCare", arg0.getItemAtPosition(arg2).toString());
+		
+	}
+
+	@Override
+	public void onNothingSelected(AdapterView<?> arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+}

@@ -1,0 +1,24 @@
+package ca.dillonyoung.tracare;
+
+import android.content.Context;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+
+public class EntriesDataSource {
+
+	private SQLiteDatabase database;
+	private MySQLiteHelper dbHelper;
+	private String[] allColumns = { "weight", "sleep", "energy_level", "quality_of_sleep", "fitness", "nutrition", "symptom" };
+	
+	public PreferencesDataSource(Context context) {
+		this.dbHelper = new MySQLiteHelper(context);
+	}
+	
+	public void open() throws SQLException {
+		this.database = this.dbHelper.getWritableDatabase();
+	}
+	
+	public void close() {
+		this.dbHelper.close();
+	}
+}

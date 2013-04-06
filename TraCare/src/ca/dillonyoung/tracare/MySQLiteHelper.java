@@ -7,8 +7,10 @@ import android.util.Log;
 
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
+	public static boolean firstRun = false;
+	
 	private static final String DATABASE_NAME = "tracare.db";
-	private static final int DATABASE_VERSION = 4;
+	private static final int DATABASE_VERSION = 7;
 	
 	public MySQLiteHelper(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -41,14 +43,16 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 		sqlQuery = "CREATE TABLE locations (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, latitude FLOAT NOT NULL, longitude FLOAT NOT NULL)";
 		database.execSQL(sqlQuery);
 		
-		sqlQuery = "CREATE TABLE entries (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, dateentered DATETIME NOT NULL, location INT NOT NULL, weight FLOAT, hours_sleep FLOAT, energy_level INT, quality_of_sleep INT, fitness TEXT, nutrition TEXT, symptom INT, symptom_description TEXT)";
+		sqlQuery = "CREATE TABLE entries (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, dateentered LONG NOT NULL, location FLOAT NOT NULL, weight FLOAT, hours_sleep FLOAT, energy_level FLOAT, quality_of_sleep FLOAT, fitness TEXT, nutrition TEXT, symptom FLOAT, symptom_description TEXT)";
 		database.execSQL(sqlQuery);
 		
 		sqlQuery = "INSERT INTO preferences (weight, sleep, energy_level, quality_of_sleep, fitness, nutrition, symptom) VALUES(1, 1, 1, 1, 1, 1, 1)";
 		database.execSQL(sqlQuery);
 		
-		sqlQuery = "INSERT INTO user_details (name, gender, weight) VALUES('User', 1, 100.0)";
+		sqlQuery = "INSERT INTO user_details (name, gender, weight) VALUES('', 1, 0.0)";
 		database.execSQL(sqlQuery);
+		
+		firstRun = true;
 		
 		Log.v("TraCare", "Creating");
 	}
