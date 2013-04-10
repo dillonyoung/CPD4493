@@ -1,12 +1,17 @@
 package ca.dillonyoung.tracare;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
+/**
+ * Filename: SummaryActivity.java
+ * Author..: Dillon Young (C0005790)
+ */
 
+// Include required imports
+import java.util.Calendar;
+import java.util.Locale;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,6 +36,8 @@ public class SummaryActivity extends Activity {
 	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		// Set the layout for the activity
 		setContentView(R.layout.summary);
 		
 		// Create a reference to the run report button
@@ -91,71 +98,79 @@ public class SummaryActivity extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				
-                
-			   // Declare variable
-			   int count = 0;
-			   int rvalue = -1;
-			   float total = 0;
-			   
+			   // Declare and configure the start date
 			   Calendar startCal = Calendar.getInstance();
 			   startCal.set(Calendar.MONTH, startDateMonth);
 			   startCal.set(Calendar.DAY_OF_MONTH, startDateDay);
 			   startCal.set(Calendar.YEAR, startDateYear);
-			   Date newStart = startCal.getTime();
 			   
+			   // Declare and configure the end date
 			   Calendar endCal = Calendar.getInstance();
 			   endCal.set(Calendar.MONTH, endDateMonth);
 			   endCal.set(Calendar.DAY_OF_MONTH, endDateDay);
 			   endCal.set(Calendar.YEAR, endDateYear);
-			   Date newEnd = endCal.getTime();
-			   
-			   java.sql.Date startDate = new java.sql.Date(newStart.getTime());
-			   java.sql.Date endDate = new java.sql.Date(newEnd.getTime());
-			
+		
+			   // Declare a reference to the Summary class
 			   Summary report = new Summary();
 			   
-			   // Declare query statement
-			   String query = "SELECT * FROM tracare_entries WHERE userid = ? AND datetime BETWEEN ? AND ?";
-			           
-			   try {
-			
-			       // Create the prepared statement and fill in the values
-			       PreparedStatement pstmt = conn.prepareStatement(query);
-			       pstmt.setInt(1, userid);
-			       pstmt.setDate(2, startDate);
-			       pstmt.setDate(3, endDate);
-			       
-			       // Execute the statement
-			       ResultSet rs = pstmt.executeQuery();
-			       ResultSetMetaData rsmd = rs.getMetaData();
-			       while (rs.next()) {
-			
-			           if (rs.getFloat(4) < report.getLowestWeight()) {
-			               report.setLowestWeight(rs.getFloat(4));
-			               report.setLowestDate(rs.getDate(3));
-			           }
-			           if (rs.getFloat(4) > report.getHighestWeight()) {
-			               report.setHighestWeight(rs.getFloat(4));
-			               report.setHighestDate(rs.getDate(3));
-			           }
-			           
-			           count++;
-			           total += rs.getFloat(4);
-			       }
-			
-			       report.setAverageWeight(total / count);
-			       
-			       if (count == 0) {
-			           report.setHighestDate(end);
-			           report.setLowestDate(start);
-			           report.setHighestWeight(0);
-			           report.setLowestWeight(0);
-			           report.setAverageWeight(0);
-			       }
-			
-			   } catch (SQLException ex) {
-			       rvalue = -3;
+			   // Update the start and end dates on the report
+			   report.setStartDate(startCal.getTimeInMillis());
+			   report.setEndDate(endCal.getTimeInMillis());
+			   
+			   // Loop through the entries
+			   for (int i = 0; i < Main.entries.size(); i++) {
+
+				   // Check to see if the entry is between the selected start and end dates
+				   if (Main.entries.get(i).getDateEntered() >= startCal.getTimeInMillis() && Main.entries.get(i).getDateEntered() <= endCal.getTimeInMillis()) {
+					   
+					   // Check to see if the weight is less than the lowest weight
+					   if (Main.entries.get(i).getWeight() < report.getLowestWeight()) {
+						   
+						   // Update the lowest weight details
+						   report.setLowestWeight(Main.entries.get(i).getWeight());
+						   report.setLowestDate(Main.entries.get(i).getDateEntered());
+					   }
+					   
+					   // Check to see if the weight is greater than the highest weight
+					   if (Main.entries.get(i).getWeight() > report.getHighestWeight()) {
+						   
+						   // Update the highest weight details
+						   report.setHighestWeight(Main.entries.get(i).getWeight());
+						   report.setHighestDate(Main.entries.get(i).getDateEntered());
+					   }
+					   
+					   // Update the average details
+					   report.setCount(report.getCount() + 1);
+					   report.setAverageWeight(report.getAverageWeight() + Main.entries.get(i).getWeight());
+				   }
 			   }
+			   
+			   // Calculate the average
+			   report.setAverageWeight(report.getAverageWeight() / report.getCount());
+			   
+			   // Check to see if no entries were found and set the displays to default values
+			   if (report.getCount() == 0) {
+				   report.setHighestDate(endCal.getTimeInMillis());
+				   report.setLowestDate(startCal.getTimeInMillis());
+				   report.setHighestWeight(0);
+				   report.setLowestWeight(0);
+				   report.setAverageWeight(0);
+			   }
+			   
+				// Create an Intent to launch the ReportActivity
+				Intent reportIntent = new Intent(SummaryActivity.this, ReportActivity.class);
+				
+				// Add the report data to the intent
+				reportIntent.putExtra("startdate", report.getStartDate());
+				reportIntent.putExtra("enddate", report.getEndDate());
+				reportIntent.putExtra("lowestweight", report.getLowestWeight());
+				reportIntent.putExtra("lowestdate", report.getLowestDate());
+				reportIntent.putExtra("highestweight", report.getHighestWeight());
+				reportIntent.putExtra("highestdate", report.getHighestDate());
+				reportIntent.putExtra("averageweight", report.getAverageWeight());
+				
+				// Start the activity
+				startActivity(reportIntent);
 			}
 		});
 	}
@@ -204,16 +219,26 @@ public class SummaryActivity extends Activity {
 				}
 	};
 	
+	/**
+	 * Builds a formatted string based on a month, day and year
+	 * @param month The number value of a month
+	 * @param day The number value of a day
+	 * @param year The number value of a year
+	 * @return Returns the formatted string
+	 */
 	private String formatDate(int month, int day, int year) {
 		
+		// Get a calendar based on the supplied day, month and year
 		Calendar c = Calendar.getInstance();
 		c.set(Calendar.MONTH, month);
 		c.set(Calendar.DAY_OF_MONTH, day);
 		c.set(Calendar.YEAR, year);
 		
+		// Build the formatted string
 		String value = c.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.US) +
 				" " + day + ", " + year;
 		
+		// Return the formatted string
 		return value;
 	}
 }

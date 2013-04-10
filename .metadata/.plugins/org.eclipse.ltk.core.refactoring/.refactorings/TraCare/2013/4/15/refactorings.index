@@ -3,3 +3,10 @@
 1365603796624	Encapsulate field 'lowestWeight'
 1365603802726	Encapsulate field 'highestWeight'
 1365603808460	Encapsulate field 'averageWeight'
+1365627540282	Encapsulate field 'lowestDate'
+1365627550678	Encapsulate field 'highestDate'
+1365627677544	Encapsulate field 'count'
+1365631504420	Encapsulate field 'startDate'
+1365631511126	Encapsulate field 'endDate'
+1365637273533	Delete element
+1365637698715	Delete element

@@ -19,6 +19,7 @@
     <string name="track_fitness">Track Fitness</string>
     <string name="track_nutrition">Track Nutrition</string>
     <string name="savesettings">Save Settings</string>
+    <string name="back">Back</string>
     <string name="yourname">Your name</string>
     <string name="track_symptom">Track Symptom</string>
     <string name="image"></string>
@@ -29,7 +30,13 @@
     <string name="startdate">Start Date</string>
     <string name="enddate">End Date</string>
     <string name="runreport">Run Report</string>
-
+    <string name="reportstart">Report Start Date</string>
+    <string name="reportend">Report End Date</string>
+    <string name="lowestweight">Lowest Weight</string>
+    <string name="lowestdate">Lowest Weight Date</string>
+	<string name="highestweight">Highest Weight</string>
+    <string name="highestdate">Highest Weight Date</string>
+    <string name="averageweight">Average Weight</string>
     <string-array name="hours_of_sleep">
         <item>0.0 Hours of Sleep</item>
         <item>0.5 Hours of Sleep</item>

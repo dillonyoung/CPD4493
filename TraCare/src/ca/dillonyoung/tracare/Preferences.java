@@ -1,5 +1,10 @@
 package ca.dillonyoung.tracare;
 
+/**
+ * Filename: Preferences.java
+ * Author..: Dillon Young (C0005790)
+ */
+
 public class Preferences {
 
 	private boolean weight;

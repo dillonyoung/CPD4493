@@ -1,7 +1,12 @@
 package ca.dillonyoung.tracare;
 
-import java.text.DecimalFormat;
+/**
+ * Filename: PreferencesActivity.java
+ * Author..: Dillon Young (C0005790)
+ */
 
+// Include required imports
+import java.text.DecimalFormat;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +33,8 @@ public class PreferencesActivity extends Activity {
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		// Set the layout for the activity
 		setContentView(R.layout.preferences);
 
 		// Associate the widgets with the references

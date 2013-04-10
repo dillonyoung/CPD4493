@@ -1,8 +1,13 @@
 package ca.dillonyoung.tracare;
 
+/**
+ * Filename: EntriesListActivity.java
+ * Author..: Dillon Young (C0005790)
+ */
+
+// Include required imports
 import java.sql.Date;
 import java.util.ArrayList;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -39,6 +44,8 @@ public class EntryListActivity extends Activity {
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		// Set the layout for the activity
 		setContentView(R.layout.entrylist);
 
 		galleryEntries = (Gallery) findViewById(R.id.galleryEntries);
@@ -68,7 +75,9 @@ public class EntryListActivity extends Activity {
 					.format("MMMM d, yyyy hh:mm:ss aa", curDate).toString());
 		}
 
-		System.err.println(entries.size());
+		if (entries.size() == 0) {
+			txtEntryWeight.setText("There are currently no entries");
+		}
 
 		ArrayAdapter arrayAdapter = new ArrayAdapter(this,
 				android.R.layout.simple_gallery_item, entryDate.toArray());

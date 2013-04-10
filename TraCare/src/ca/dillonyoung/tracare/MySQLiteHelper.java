@@ -1,5 +1,11 @@
 package ca.dillonyoung.tracare;
 
+/**
+ * Filename: MySQLiteHelper.java
+ * Author..: Dillon Young (C0005790)
+ */
+
+// Include required imports
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;

@@ -1,5 +1,11 @@
 package ca.dillonyoung.tracare;
 
+/**
+ * Filename: SplashActivity.java
+ * Author..: Dillon Young (C0005790)
+ */
+
+// Include required imports
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +17,8 @@ public class SplashActivity extends Activity {
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		// Set the layout for the activity
 		setContentView(R.layout.splash);
 
 		// Get a reference to the image view

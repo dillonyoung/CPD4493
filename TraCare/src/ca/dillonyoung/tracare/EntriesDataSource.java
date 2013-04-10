@@ -1,5 +1,11 @@
 package ca.dillonyoung.tracare;
 
+/**
+ * Filename: EntriesDataSource.java
+ * Author..: Dillon Young (C0005790)
+ */
+
+// Include required imports
 import java.util.ArrayList;
 import java.util.Date;
 

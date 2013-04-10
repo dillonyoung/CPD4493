@@ -16,10 +16,10 @@
 
             <TextView
                 android:id="@+id/textView1"
+                style="@style/heading"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/string_new_entry"
-                android:textSize="24sp" />
+                android:text="@string/string_new_entry" />
         </TableRow>
 
         <TableRow
@@ -48,7 +48,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:prompt="@string/string_hours_of_sleep" />
-
         </TableRow>
 
         <TableRow
@@ -89,7 +88,6 @@
                 android:hint="@string/string_fitness"
                 android:inputType="textMultiLine"
                 android:lines="4" >
-
             </EditText>
         </TableRow>
 
@@ -107,11 +105,9 @@
                 android:hint="@string/string_nutrition"
                 android:inputType="textMultiLine"
                 android:lines="4" >
-
             </EditText>
         </TableRow>
 
-        
         <TableRow
             android:id="@+id/rowAddEntrySymptom"
             android:layout_width="wrap_content"
@@ -123,7 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </TableRow>
-        
+
         <TableRow
             android:id="@+id/rowAddEntrySymptomDescription"
             android:layout_width="wrap_content"
@@ -138,7 +134,6 @@
                 android:hint="@string/string_symtpom_description"
                 android:inputType="textMultiLine"
                 android:lines="4" >
-
             </EditText>
         </TableRow>
 
@@ -151,6 +146,7 @@
 
             <Button
                 android:id="@+id/btnSave"
+                style="@style/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/saveentry" />

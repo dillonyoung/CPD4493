@@ -16,11 +16,11 @@
 
             <TextView
                 android:id="@+id/textView1"
+                style="@style/heading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
-                android:text="@string/user_details"
-                android:textSize="24sp" />
+                android:text="@string/user_details" />
         </TableRow>
 
         <TableRow
@@ -50,10 +50,10 @@
 
             <TextView
                 android:id="@+id/textView2"
+                style="@style/label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/gender"
-                android:textStyle="bold" />
+                android:text="@string/gender" />
 
             <RadioGroup
                 android:id="@+id/rdgrpGender"
@@ -83,10 +83,10 @@
 
             <TextView
                 android:id="@+id/textView3"
+                style="@style/label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/weight"
-                android:textStyle="bold" />
+                android:text="@string/weight" />
 
             <EditText
                 android:id="@+id/txtUserWeight"
@@ -105,11 +105,11 @@
 
             <TextView
                 android:id="@+id/textView4"
+                style="@style/heading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
-                android:text="@string/preferences"
-                android:textSize="24sp" />
+                android:text="@string/preferences" />
         </TableRow>
 
         <TableRow
@@ -120,10 +120,10 @@
 
             <TextView
                 android:id="@+id/textView5"
+                style="@style/label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/track_weight"
-                android:textStyle="bold" />
+                android:text="@string/track_weight" />
 
             <Switch
                 android:id="@+id/switchWeight"
@@ -140,10 +140,10 @@
 
             <TextView
                 android:id="@+id/textView6"
+                style="@style/label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/track_sleep"
-                android:textStyle="bold" />
+                android:text="@string/track_sleep" />
 
             <Switch
                 android:id="@+id/switchSleep"
@@ -160,10 +160,10 @@
 
             <TextView
                 android:id="@+id/textView7"
+                style="@style/label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/track_energy_level"
-                android:textStyle="bold" />
+                android:text="@string/track_energy_level" />
 
             <Switch
                 android:id="@+id/switchEnergyLevel"
@@ -180,10 +180,10 @@
 
             <TextView
                 android:id="@+id/textView8"
+                style="@style/label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/track_fitness"
-                android:textStyle="bold" />
+                android:text="@string/track_fitness" />
 
             <Switch
                 android:id="@+id/switchFitness"
@@ -200,10 +200,10 @@
 
             <TextView
                 android:id="@+id/textView9"
+                style="@style/label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/track_nutrition"
-                android:textStyle="bold" />
+                android:text="@string/track_nutrition" />
 
             <Switch
                 android:id="@+id/switchNutrition"
@@ -211,8 +211,8 @@
                 android:layout_height="wrap_content"
                 android:text="" />
         </TableRow>
-        
-                <TableRow
+
+        <TableRow
             android:id="@+id/tableRow11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -220,10 +220,10 @@
 
             <TextView
                 android:id="@+id/textView10"
+                style="@style/label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/track_symptom"
-                android:textStyle="bold" />
+                android:text="@string/track_symptom" />
 
             <Switch
                 android:id="@+id/switchSymptom"
@@ -241,6 +241,7 @@
 
             <Button
                 android:id="@+id/btnSave"
+                style="@style/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="2"

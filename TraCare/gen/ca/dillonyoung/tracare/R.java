@@ -30,27 +30,32 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int entries=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int preferences=0x7f020002;
-        public static final int splash_background=0x7f020003;
-        public static final int splash_image=0x7f020004;
-        public static final int summary=0x7f020005;
+        public static final int background=0x7f020000;
+        public static final int entries=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int icon_blue=0x7f020003;
+        public static final int icon_clear=0x7f020004;
+        public static final int logo=0x7f020005;
+        public static final int preferences=0x7f020006;
+        public static final int splash_background=0x7f020007;
+        public static final int splash_image=0x7f020008;
+        public static final int summary=0x7f020009;
     }
     public static final class id {
         public static final int TableLayout1=0x7f0a0000;
-        public static final int action_settings=0x7f0a004c;
-        public static final int addEntry=0x7f0a004a;
-        public static final int btnEndDate=0x7f0a0048;
-        public static final int btnRunReport=0x7f0a0049;
+        public static final int action_settings=0x7f0a0053;
+        public static final int addEntry=0x7f0a0051;
+        public static final int btnBack=0x7f0a004c;
+        public static final int btnEndDate=0x7f0a004f;
+        public static final int btnRunReport=0x7f0a0050;
         public static final int btnSave=0x7f0a0014;
-        public static final int btnStartDate=0x7f0a0047;
-        public static final int deleteEntry=0x7f0a004b;
+        public static final int btnStartDate=0x7f0a004e;
+        public static final int deleteEntry=0x7f0a0052;
         public static final int galleryEntries=0x7f0a0015;
-        public static final int imgLogo=0x7f0a0046;
-        public static final int radFemale=0x7f0a002d;
-        public static final int radMale=0x7f0a002c;
-        public static final int rdgrpGender=0x7f0a002b;
+        public static final int imgLogo=0x7f0a004d;
+        public static final int radFemale=0x7f0a002c;
+        public static final int radMale=0x7f0a002b;
+        public static final int rdgrpGender=0x7f0a002a;
         public static final int rowAddEntryEnergyLevel=0x7f0a0009;
         public static final int rowAddEntryFitness=0x7f0a000b;
         public static final int rowAddEntryHours=0x7f0a0005;
@@ -67,40 +72,39 @@ public final class R {
         public static final int rowEntrySymptom=0x7f0a0022;
         public static final int rowEntrySymptomDescription=0x7f0a0024;
         public static final int rowEntryWeight=0x7f0a0016;
-        public static final int section_label=0x7f0a0026;
         public static final int spinEnergyLevel=0x7f0a000a;
         public static final int spinHours=0x7f0a0006;
         public static final int spinQualityofSleep=0x7f0a0008;
         public static final int spinSymptom=0x7f0a0010;
-        public static final int switchEnergyLevel=0x7f0a003b;
-        public static final int switchFitness=0x7f0a003e;
-        public static final int switchNutrition=0x7f0a0041;
-        public static final int switchSleep=0x7f0a0038;
-        public static final int switchSymptom=0x7f0a0044;
-        public static final int switchWeight=0x7f0a0035;
+        public static final int switchEnergyLevel=0x7f0a003a;
+        public static final int switchFitness=0x7f0a003d;
+        public static final int switchNutrition=0x7f0a0040;
+        public static final int switchSleep=0x7f0a0037;
+        public static final int switchSymptom=0x7f0a0043;
+        public static final int switchWeight=0x7f0a0034;
         public static final int tableRow1=0x7f0a0001;
-        public static final int tableRow10=0x7f0a003f;
-        public static final int tableRow11=0x7f0a0042;
-        public static final int tableRow12=0x7f0a0045;
+        public static final int tableRow10=0x7f0a003e;
+        public static final int tableRow11=0x7f0a0041;
+        public static final int tableRow12=0x7f0a0044;
         public static final int tableRow13=0x7f0a0013;
-        public static final int tableRow2=0x7f0a0027;
-        public static final int tableRow3=0x7f0a0029;
-        public static final int tableRow4=0x7f0a002e;
-        public static final int tableRow5=0x7f0a0031;
-        public static final int tableRow6=0x7f0a0033;
-        public static final int tableRow7=0x7f0a0036;
-        public static final int tableRow8=0x7f0a0039;
-        public static final int tableRow9=0x7f0a003c;
+        public static final int tableRow2=0x7f0a0026;
+        public static final int tableRow3=0x7f0a0028;
+        public static final int tableRow4=0x7f0a002d;
+        public static final int tableRow5=0x7f0a0030;
+        public static final int tableRow6=0x7f0a0032;
+        public static final int tableRow7=0x7f0a0035;
+        public static final int tableRow8=0x7f0a0038;
+        public static final int tableRow9=0x7f0a003b;
         public static final int textView1=0x7f0a0002;
-        public static final int textView10=0x7f0a0043;
-        public static final int textView2=0x7f0a002a;
-        public static final int textView3=0x7f0a002f;
-        public static final int textView4=0x7f0a0032;
-        public static final int textView5=0x7f0a0034;
-        public static final int textView6=0x7f0a0037;
-        public static final int textView7=0x7f0a003a;
-        public static final int textView8=0x7f0a003d;
-        public static final int textView9=0x7f0a0040;
+        public static final int textView10=0x7f0a0042;
+        public static final int textView2=0x7f0a0029;
+        public static final int textView3=0x7f0a002e;
+        public static final int textView4=0x7f0a0031;
+        public static final int textView5=0x7f0a0033;
+        public static final int textView6=0x7f0a0036;
+        public static final int textView7=0x7f0a0039;
+        public static final int textView8=0x7f0a003c;
+        public static final int textView9=0x7f0a003f;
         public static final int txtEntryEnergyLevel=0x7f0a001d;
         public static final int txtEntryFitness=0x7f0a001f;
         public static final int txtEntryHoursSleep=0x7f0a0019;
@@ -111,17 +115,24 @@ public final class R {
         public static final int txtEntryWeight=0x7f0a0017;
         public static final int txtFitness=0x7f0a000c;
         public static final int txtNutrition=0x7f0a000e;
+        public static final int txtReportAverageWeight=0x7f0a004b;
+        public static final int txtReportEndDate=0x7f0a0046;
+        public static final int txtReportHighestDate=0x7f0a004a;
+        public static final int txtReportHighestWeight=0x7f0a0049;
+        public static final int txtReportLowestDate=0x7f0a0048;
+        public static final int txtReportLowestWeight=0x7f0a0047;
+        public static final int txtReportStartDate=0x7f0a0045;
         public static final int txtSymptomDescription=0x7f0a0012;
-        public static final int txtUserName=0x7f0a0028;
-        public static final int txtUserWeight=0x7f0a0030;
+        public static final int txtUserName=0x7f0a0027;
+        public static final int txtUserWeight=0x7f0a002f;
         public static final int txtWeight=0x7f0a0004;
     }
     public static final class layout {
         public static final int addentry=0x7f030000;
         public static final int entrylist=0x7f030001;
-        public static final int fragment_main_dummy=0x7f030002;
-        public static final int main=0x7f030003;
-        public static final int preferences=0x7f030004;
+        public static final int main=0x7f030002;
+        public static final int preferences=0x7f030003;
+        public static final int report=0x7f030004;
         public static final int splash=0x7f030005;
         public static final int summary=0x7f030006;
     }
@@ -132,25 +143,33 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
-        public static final int blank=0x7f060015;
-        public static final int enddate=0x7f06001a;
+        public static final int averageweight=0x7f060023;
+        public static final int back=0x7f060012;
+        public static final int blank=0x7f060016;
+        public static final int enddate=0x7f06001b;
         public static final int female=0x7f060008;
         public static final int gender=0x7f060006;
-        public static final int image=0x7f060014;
+        public static final int highestdate=0x7f060022;
+        public static final int highestweight=0x7f060021;
+        public static final int image=0x7f060015;
+        public static final int lowestdate=0x7f060020;
+        public static final int lowestweight=0x7f06001f;
         public static final int male=0x7f060007;
-        public static final int menu_add_entry=0x7f060016;
-        public static final int menu_delete_entry=0x7f060017;
+        public static final int menu_add_entry=0x7f060017;
+        public static final int menu_delete_entry=0x7f060018;
         public static final int preferences=0x7f06000a;
-        public static final int runreport=0x7f06001b;
-        public static final int saveentry=0x7f060021;
+        public static final int reportend=0x7f06001e;
+        public static final int reportstart=0x7f06001d;
+        public static final int runreport=0x7f06001c;
+        public static final int saveentry=0x7f060029;
         public static final int savesettings=0x7f060011;
-        public static final int startdate=0x7f060019;
-        public static final int string_fitness=0x7f06001e;
-        public static final int string_hours_of_sleep=0x7f06001d;
-        public static final int string_new_entry=0x7f06001c;
-        public static final int string_nutrition=0x7f06001f;
-        public static final int string_symtpom_description=0x7f060020;
-        public static final int summary=0x7f060018;
+        public static final int startdate=0x7f06001a;
+        public static final int string_fitness=0x7f060026;
+        public static final int string_hours_of_sleep=0x7f060025;
+        public static final int string_new_entry=0x7f060024;
+        public static final int string_nutrition=0x7f060027;
+        public static final int string_symtpom_description=0x7f060028;
+        public static final int summary=0x7f060019;
         public static final int title_section1=0x7f060002;
         public static final int title_section2=0x7f060003;
         public static final int title_section3=0x7f060004;
@@ -159,11 +178,11 @@ public final class R {
         public static final int track_nutrition=0x7f060010;
         public static final int track_quality_of_sleep=0x7f06000e;
         public static final int track_sleep=0x7f06000c;
-        public static final int track_symptom=0x7f060013;
+        public static final int track_symptom=0x7f060014;
         public static final int track_weight=0x7f06000b;
         public static final int user_details=0x7f060005;
         public static final int weight=0x7f060009;
-        public static final int yourname=0x7f060012;
+        public static final int yourname=0x7f060013;
     }
     public static final class style {
         /** 
@@ -192,5 +211,9 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f080001;
+        public static final int button=0x7f080004;
+        public static final int heading=0x7f080003;
+        public static final int label=0x7f080002;
+        public static final int value=0x7f080005;
     }
 }

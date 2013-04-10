@@ -1,5 +1,11 @@
 package ca.dillonyoung.tracare;
 
+/**
+ * Filename: PreferencesDataSource.java
+ * Author..: Dillon Young (C0005790)
+ */
+
+// Include required imports
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;

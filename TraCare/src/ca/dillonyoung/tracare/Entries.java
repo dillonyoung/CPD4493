@@ -1,5 +1,10 @@
 package ca.dillonyoung.tracare;
 
+/**
+ * Filename: Entries.java
+ * Author..: Dillon Young (C0005790)
+ */
+
 public class Entries {
 
 	private int id;

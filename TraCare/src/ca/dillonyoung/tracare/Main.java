@@ -1,5 +1,11 @@
 package ca.dillonyoung.tracare;
 
+/**
+ * Filename: Main.java
+ * Author..: Dillon Young (C0005790)
+ */
+
+// Include required imports
 import java.util.ArrayList;
 
 import android.app.AlertDialog;

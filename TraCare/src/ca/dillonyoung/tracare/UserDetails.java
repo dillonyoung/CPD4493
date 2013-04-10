@@ -1,5 +1,10 @@
 package ca.dillonyoung.tracare;
 
+/**
+ * Filename: UserDetails.java
+ * Author..: Dillon Young (C0005790)
+ */
+
 public class UserDetails {
 
 	private String name;

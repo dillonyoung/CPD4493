@@ -1,0 +1,76 @@
+package ca.dillonyoung.tracare;
+
+import java.util.Calendar;
+import java.util.Locale;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class ReportActivity extends Activity {
+
+	private TextView txtStartDate;
+	private TextView txtEndDate;
+	private TextView txtLowestWeight;
+	private TextView txtLowestDate;
+	private TextView txtHighestWeight;
+	private TextView txtHighestDate;
+	private TextView txtAverageWeight;
+	private Button btnBack;
+	
+	public Summary report;
+	
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.report);
+		
+		txtStartDate = (TextView) findViewById(R.id.txtReportStartDate);
+		txtEndDate = (TextView) findViewById(R.id.txtReportEndDate);
+		txtLowestWeight = (TextView) findViewById(R.id.txtReportLowestWeight);
+		txtLowestDate = (TextView) findViewById(R.id.txtReportLowestDate);
+		txtHighestWeight = (TextView) findViewById(R.id.txtReportHighestWeight);
+		txtHighestDate = (TextView) findViewById(R.id.txtReportHighestDate);
+		txtAverageWeight = (TextView) findViewById(R.id.txtReportAverageWeight);
+		
+		btnBack = (Button) findViewById(R.id.btnBack);
+		
+		// Update the report start date
+		txtStartDate.setText(formatDate(month, day, year))
+		
+		// Create and associate the back button on click listener
+		btnBack.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				
+				// Close the current activity
+				finish();
+			}
+		});
+	}
+
+
+	/**
+	 * Builds a formatted string based on a month, day and year
+	 * @param month The number value of a month
+	 * @param day The number value of a day
+	 * @param year The number value of a year
+	 * @return Returns the formatted string
+	 */
+	private String formatDate(long date) {
+		
+		// Get a calendar based on the supplied day, month and year
+		Calendar c = Calendar.getInstance();
+		c.setTimeInMillis(date);
+		
+		// Build the formatted string
+		String value = c.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.US) +
+				" " + c.get(Calendar.DAY_OF_MONTH) + ", " + c.get(Calendar.YEAR);
+		
+		// Return the formatted string
+		return value;
+	}
+}

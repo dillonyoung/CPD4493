@@ -1,5 +1,11 @@
 package ca.dillonyoung.tracare;
 
+/**
+ * Filename: AddEntryActivity.java
+ * Author..: Dillon Young (C0005790)
+ */
+
+// Include required imports
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,6 +34,8 @@ public class AddEntryActivity extends Activity {
 	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		// Set the layout for the activity
 		setContentView(R.layout.addentry);
 		
 		// Check to see if the weight entry should be tracked

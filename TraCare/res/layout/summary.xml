@@ -10,20 +10,18 @@
 
         <TableRow
             android:id="@+id/tableRow1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dip" >
 
             <TextView
                 android:id="@+id/textView1"
+                style="@style/heading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
-                android:text="@string/summary"
-                android:textSize="24sp" />
+                android:text="@string/summary" />
         </TableRow>
-
-
 
         <TableRow
             android:id="@+id/tableRow2"
@@ -33,19 +31,19 @@
 
             <TextView
                 android:id="@+id/textView2"
+                style="@style/label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/startdate"
-                android:textStyle="bold" />
+                android:text="@string/startdate" />
 
             <Button
                 android:id="@+id/btnStartDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/blank" />
+                android:text="@string/blank"
+                style="@style/button" />
         </TableRow>
-        
-        
+
         <TableRow
             android:id="@+id/tableRow3"
             android:layout_width="wrap_content"
@@ -54,19 +52,18 @@
 
             <TextView
                 android:id="@+id/textView3"
+                style="@style/label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/enddate"
-                android:textStyle="bold" />
+                android:text="@string/enddate" />
 
             <Button
                 android:id="@+id/btnEndDate"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/blank" />
-
+                android:text="@string/blank"
+                style="@style/button" />
         </TableRow>
-
 
         <TableRow
             android:id="@+id/tableRow4"
@@ -77,6 +74,7 @@
 
             <Button
                 android:id="@+id/btnRunReport"
+                style="@style/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
