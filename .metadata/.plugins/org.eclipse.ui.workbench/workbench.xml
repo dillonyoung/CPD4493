@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="12" version="2.0">
+<workbench progressCount="25" version="2.0">
 <workbenchAdvisor/>
 <window height="728" maximized="true" width="1024" x="104" y="0">
-<fastViewData fastViewLocation="1024"/>
-<intro standby="true"/>
+<fastViewData fastViewLocation="1024">
+<orientation position="512" view="com.android.ide.eclipse.ddms.views.LogCatView"/>
+</fastViewData>
 <perspectiveBar>
 <itemSize x="250"/>
 </perspectiveBar>
@@ -17,29 +18,160 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="284" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1365186897520" focus="true" label="Workspace - Java">
+<page aggregateWorkingSetId="Aggregate for window 1364843103718" focus="true" label="Workspace - Debug">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
+<part id="20"/>
+<part id="21"/>
+<part id="22"/>
+</presentation>
 </folder>
 </info>
 </editorArea>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="main.xml" partName="main.xml" path="F:/Github Projects/CPD4493/TraCare/res/layout/main.xml" title="main.xml" tooltip="TraCare/res/layout/main.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/res/layout/main.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MySQLiteHelper.java" partName="MySQLiteHelper.java" path="F:/Github Projects/CPD4493/TraCare/src/ca/dillonyoung/tracare/MySQLiteHelper.java" title="MySQLiteHelper.java" tooltip="TraCare/src/ca/dillonyoung/tracare/MySQLiteHelper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/src/ca/dillonyoung/tracare/MySQLiteHelper.java"/>
+<editorState selectionHorizontalPixel="32" selectionLength="0" selectionOffset="2237" selectionTopPixel="479"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Preferences.java" partName="Preferences.java" path="F:/Github Projects/CPD4493/TraCare/src/ca/dillonyoung/tracare/Preferences.java" title="Preferences.java" tooltip="TraCare/src/ca/dillonyoung/tracare/Preferences.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/src/ca/dillonyoung/tracare/Preferences.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="510" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SymptomTypes.java" partName="SymptomTypes.java" path="F:/Github Projects/CPD4493/TraCare/src/ca/dillonyoung/tracare/SymptomTypes.java" title="SymptomTypes.java" tooltip="TraCare/src/ca/dillonyoung/tracare/SymptomTypes.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/src/ca/dillonyoung/tracare/SymptomTypes.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="115" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Locations.java" partName="Locations.java" path="F:/Github Projects/CPD4493/TraCare/src/ca/dillonyoung/tracare/Locations.java" title="Locations.java" tooltip="TraCare/src/ca/dillonyoung/tracare/Locations.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/src/ca/dillonyoung/tracare/Locations.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="135" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Entries.java" partName="Entries.java" path="F:/Github Projects/CPD4493/TraCare/src/ca/dillonyoung/tracare/Entries.java" title="Entries.java" tooltip="TraCare/src/ca/dillonyoung/tracare/Entries.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/src/ca/dillonyoung/tracare/Entries.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="214" selectionTopPixel="0"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="fragment_main_dummy.xml" partName="fragment_main_dummy.xml" path="F:/Github Projects/CPD4493/TraCare/res/layout/fragment_main_dummy.xml" title="fragment_main_dummy.xml" tooltip="TraCare/res/layout/fragment_main_dummy.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/res/layout/fragment_main_dummy.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="entrylist.xml" partName="entrylist.xml" path="F:/Github Projects/CPD4493/TraCare/res/layout/entrylist.xml" title="entrylist.xml" tooltip="TraCare/res/layout/entrylist.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/res/layout/entrylist.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="summary.xml" partName="summary.xml" path="F:/Github Projects/CPD4493/TraCare/res/layout/summary.xml" title="summary.xml" tooltip="TraCare/res/layout/summary.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/res/layout/summary.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="preferences.xml" partName="preferences.xml" path="F:/Github Projects/CPD4493/TraCare/res/layout/preferences.xml" title="preferences.xml" tooltip="TraCare/res/layout/preferences.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/res/layout/preferences.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EntryListActivity.java" partName="EntryListActivity.java" path="F:/Github Projects/CPD4493/TraCare/src/ca/dillonyoung/tracare/EntryListActivity.java" title="EntryListActivity.java" tooltip="TraCare/src/ca/dillonyoung/tracare/EntryListActivity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/src/ca/dillonyoung/tracare/EntryListActivity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="640" selectionTopPixel="581"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SummaryActivity.java" partName="SummaryActivity.java" path="F:/Github Projects/CPD4493/TraCare/src/ca/dillonyoung/tracare/SummaryActivity.java" title="SummaryActivity.java" tooltip="TraCare/src/ca/dillonyoung/tracare/SummaryActivity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/src/ca/dillonyoung/tracare/SummaryActivity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3697" selectionTopPixel="1616"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PreferencesActivity.java" partName="PreferencesActivity.java" path="F:/Github Projects/CPD4493/TraCare/src/ca/dillonyoung/tracare/PreferencesActivity.java" title="PreferencesActivity.java" tooltip="TraCare/src/ca/dillonyoung/tracare/PreferencesActivity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/src/ca/dillonyoung/tracare/PreferencesActivity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="254" selectionTopPixel="0"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" partName="strings.xml" path="F:/Github Projects/CPD4493/TraCare/res/values/strings.xml" title="strings.xml" tooltip="TraCare/res/values/strings.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/res/values/strings.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="main.xml" partName="main.xml" path="F:/Github Projects/CPD4493/TraCare/res/menu/main.xml" title="main.xml" tooltip="TraCare/res/menu/main.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/res/menu/main.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="addentry.xml" partName="addentry.xml" path="F:/Github Projects/CPD4493/TraCare/res/layout/addentry.xml" title="addentry.xml" tooltip="TraCare/res/layout/addentry.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/res/layout/addentry.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AddEntryActivity.java" partName="AddEntryActivity.java" path="F:/Github Projects/CPD4493/TraCare/src/ca/dillonyoung/tracare/AddEntryActivity.java" title="AddEntryActivity.java" tooltip="TraCare/src/ca/dillonyoung/tracare/AddEntryActivity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/src/ca/dillonyoung/tracare/AddEntryActivity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="8107" selectionTopPixel="3442"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PreferencesDataSource.java" partName="PreferencesDataSource.java" path="F:/Github Projects/CPD4493/TraCare/src/ca/dillonyoung/tracare/PreferencesDataSource.java" title="PreferencesDataSource.java" tooltip="TraCare/src/ca/dillonyoung/tracare/PreferencesDataSource.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/src/ca/dillonyoung/tracare/PreferencesDataSource.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="700" selectionOffset="803" selectionTopPixel="586"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EntriesDataSource.java" partName="EntriesDataSource.java" path="F:/Github Projects/CPD4493/TraCare/src/ca/dillonyoung/tracare/EntriesDataSource.java" title="EntriesDataSource.java" tooltip="TraCare/src/ca/dillonyoung/tracare/EntriesDataSource.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/src/ca/dillonyoung/tracare/EntriesDataSource.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1833" selectionTopPixel="986"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="F:/Github Projects/CPD4493/TraCare/src/ca/dillonyoung/tracare/Main.java" title="Main.java" tooltip="TraCare/src/ca/dillonyoung/tracare/Main.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/src/ca/dillonyoung/tracare/Main.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="712" selectionOffset="3236" selectionTopPixel="1275"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="styles.xml" partName="styles.xml" path="F:/Github Projects/CPD4493/TraCare/res/values/styles.xml" title="styles.xml" tooltip="TraCare/res/values/styles.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/res/values/styles.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Summary.java" partName="Summary.java" path="F:/Github Projects/CPD4493/TraCare/src/ca/dillonyoung/tracare/Summary.java" title="Summary.java" tooltip="TraCare/src/ca/dillonyoung/tracare/Summary.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/src/ca/dillonyoung/tracare/Summary.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1029" selectionTopPixel="344"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" partName="TraCare Manifest" path="F:/Github Projects/CPD4493/TraCare/AndroidManifest.xml" title="TraCare Manifest" tooltip="TraCare/AndroidManifest.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TraCare/AndroidManifest.xml"/>
+</editor>
 </editors>
 <views>
-<view id="com.android.ide.eclipse.ddms.views.DeviceView" partName="Devices"/>
-<view id="com.android.ide.eclipse.ddms.views.ThreadView" partName="Threads"/>
+<view id="com.android.ide.eclipse.ddms.views.DeviceView" partName="Devices">
+<viewState/>
+</view>
+<view id="com.android.ide.eclipse.ddms.views.ThreadView" partName="Threads">
+<viewState/>
+</view>
+<view id="org.eclipse.cdt.debug.ui.executablesView" partName="Executables">
+<viewState/>
+</view>
+<view id="org.eclipse.pde.runtime.LogView" partName="Error Log">
+<viewState activate="true" allSessions="true" column2="300" column3="150" column4="150" error="true" groupBy="0" info="true" limit="50" ok="true" orderType="2" orderValue="-1" show_filter_text="true" useLimit="true" warning="true"/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
+<columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="300" org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.priorityField="30" org.eclipse.ui.ide.resourceField="90"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.completionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.priorityField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.descriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
@@ -47,11 +179,18 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
 <view id="com.android.ide.eclipse.ddms.views.HeapView" partName="Heap"/>
-<view id="com.android.ide.eclipse.ddms.views.LogCatView" partName="LogCat"/>
+<view id="com.android.ide.eclipse.ddms.views.LogCatView" partName="LogCat">
+<viewState/>
+</view>
 <view id="com.android.ide.eclipse.ddms.views.FileExplorerView" partName="File Explorer"/>
 <view id="com.android.ide.eclipse.ddms.views.NetworkStatsView" partName="Network Statistics"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Warnings (4 items)"/>
+<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -65,9 +204,7 @@
 </view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
 <viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
-<customFilters userDefinedPatternsEnabled="false">
-<xmlDefinedFilters>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<customFilters userDefinedPatternsEnabled="false">&#x0A;<xmlDefinedFilters>&#x0A;<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
@@ -90,19 +227,13 @@
 </customFilters>
 </viewState>
 </view>
-<view id="org.eclipse.ui.internal.introview" partName="Android IDE">
-<viewState>
-<presentation currentPage="file:///C:/Android%20Development%20Tools/eclipse/plugins/com.android.ide.eclipse.adt.package_21.1.0.2013-2-6-0-46/index.html" restore="true"/>
-<standbyPart/>
-</viewState>
-</view>
 <view id="com.android.ide.eclipse.ddms.views.SysInfoView" partName="System Information"/>
 <view id="com.android.ide.eclipse.ddms.views.EmulatorControlView" partName="Emulator Control"/>
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="com.android.ide.eclipse.ddms.views.AllocTrackerView" partName="Allocation Tracker"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.debug.ui.DebugPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="0" fixed="0" version="0.016">
 <descriptor class="com.android.ide.eclipse.ddms.Perspective" id="com.android.ide.eclipse.ddms.Perspective" label="DDMS"/>
 <alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
@@ -147,9 +278,12 @@
 <layout>
 <mainWindow>
 <info folder="true" part="devices">
-<folder appearance="2" expanded="2">
-<page content="com.android.ide.eclipse.ddms.views.DeviceView:*" label="LabelNotFound"/>
+<folder activePageID="com.android.ide.eclipse.ddms.views.DeviceView" appearance="2" expanded="2">
 <page content="com.android.ide.eclipse.ddms.views.DeviceView" label="Devices"/>
+<page content="com.android.ide.eclipse.ddms.views.DeviceView:*" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
 <info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="devices">
@@ -160,15 +294,17 @@
 </folder>
 </info>
 <info folder="true" part="logcat" ratio="0.7986799" ratioLeft="484" ratioRight="122" relationship="4" relative="devices">
-<folder appearance="2" expanded="2">
-<page content="com.android.ide.eclipse.ddms.views.LogCatView:*" label="LabelNotFound"/>
+<folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">
 <page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
+<page content="com.android.ide.eclipse.ddms.views.LogCatView:*" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.3" ratioLeft="300" ratioRight="700" relationship="2" relative="devices"/>
 <info folder="true" part="ddms-detail" ratio="0.5" ratioLeft="350" ratioRight="350" relationship="2" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="2">
-<page content="com.android.ide.eclipse.ddms.views.ThreadView:*" label="LabelNotFound"/>
+<folder activePageID="com.android.ide.eclipse.ddms.views.ThreadView" appearance="2" expanded="2">
 <page content="com.android.ide.eclipse.ddms.views.ThreadView" label="Threads"/>
 <page content="com.android.ide.eclipse.ddms.views.HeapView" label="Heap"/>
 <page content="com.android.ide.eclipse.ddms.views.AllocTrackerView" label="Allocation Tracker"/>
@@ -176,6 +312,16 @@
 <page content="com.android.ide.eclipse.ddms.views.FileExplorerView" label="File Explorer"/>
 <page content="com.android.ide.eclipse.ddms.views.EmulatorControlView" label="Emulator Control"/>
 <page content="com.android.ide.eclipse.ddms.views.SysInfoView" label="System Information"/>
+<page content="com.android.ide.eclipse.ddms.views.ThreadView:*" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+</presentation>
 </folder>
 </info>
 </mainWindow>
@@ -241,64 +387,46 @@
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.jdt.ui.PackageExplorer"/>
-<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
-<view id="org.eclipse.ui.internal.introview"/>
 <fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="left">
-<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="left">&#x0A;<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@4d0a5970" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="left">
-<folder activePageID="org.eclipse.ui.internal.introview" appearance="2" expanded="2">
-<page content="org.eclipse.ui.internal.introview" label="Android IDE"/>
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@34042281" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="left">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.7491749" ratioLeft="454" ratioRight="152" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<info folder="true" part="bottom" ratio="0.7491749" ratioLeft="454" ratioRight="152" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="right" ratio="0.7493333" ratioLeft="562" ratioRight="188" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="right" ratio="0.7493333" ratioLeft="562" ratioRight="188" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
@@ -306,9 +434,299 @@
 </mainWindow>
 </layout>
 </perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="Debug"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.debug.ui.debugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="com.android.ide.eclipse.ddms.views.LogCatView"/>
+<show_view_action id="com.android.ide.eclipse.ddms.views.DeviceView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.cdt.debug.ui.SignalsView"/>
+<show_view_action id="org.eclipse.debug.ui.RegisterView"/>
+<show_view_action id="org.eclipse.debug.ui.ModuleView"/>
+<show_view_action id="org.eclipse.debug.ui.MemoryView"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.cdt.debug.ui.executablesView"/>
+<show_view_action id="org.eclipse.cdt.dsf.gdb.ui.tracecontrol.view"/>
+<show_view_action id="org.eclipse.cdt.dsf.debug.ui.disassembly.view"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.jdt.debug.ui.DisplayView"/>
+<perspective_action id="com.android.ide.eclipse.ddms.Perspective"/>
+<perspective_action id="org.eclipse.cdt.ui.CPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.wst.xml.ui.perspective"/>
+<hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.cdt.debug.ui.executablesView"/>
+<view id="org.eclipse.pde.runtime.LogView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<fastViews>
+<view id="com.android.ide.eclipse.ddms.views.LogCatView" ratio="0.29970545"/>
+</fastViews>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7491961" ratioLeft="466" ratioRight="156" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.cdt.debug.ui.executablesView" label="Executables"/>
+<page content="org.eclipse.pde.runtime.LogView" label="Error Log"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
+<page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@73c98b20" ratio="0.5565217" ratioLeft="256" ratioRight="204" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.8177122" ratioLeft="1108" ratioRight="247" relationship="2" relative="org.eclipse.ui.internal.ViewStack@73c98b20">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.dsf.gdb.ui.tracecontrol.view" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.24950884" ratioLeft="254" ratioRight="764" relationship="2" relative="org.eclipse.ui.internal.ViewStack@73c98b20"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="679" ratioRight="679" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.debug.ui.SignalsView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.ModuleView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</mainWindow>
+<hiddenWindow height="471" width="847" x="-910" y="136">
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
+</hiddenWindow>
+<hiddenWindow height="468" width="1103" x="-1313" y="107">
+<view id="com.android.ide.eclipse.ddms.views.LogCatView"/>
+</hiddenWindow>
+</layout>
+</perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TraCare/src/ca/dillonyoung/tracare/SummaryActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TraCare/src/ca/dillonyoung/tracare/AddEntryActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TraCare/src/ca/dillonyoung/tracare/EntriesDataSource.java"/>
+</editors>
+<item historyLabel="SummaryActivity.java" index="0">
+<position/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="5431" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="2673" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="1572" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="1592" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="6595" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="6666" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="6878" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="6706" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="6878" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="6736" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="6742" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="6798" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="6813" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="6835" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="6857" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="1588" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="1590" y="10"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="1602" y="11"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="1600" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="1613" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="1697" y="0"/>
+</item>
+<item historyLabel="AddEntryActivity.java" index="1">
+<position info="not_deleted" x="8107" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="1697" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="3081" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="3089" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="3141" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="3149" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="3191" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="3199" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="3208" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="3216" y="4"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="3341" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="3349" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="3397" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="3405" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="3443" y="0"/>
+</item>
+<item historyLabel="SummaryActivity.java" index="0">
+<position info="not_deleted" x="3451" y="0"/>
+</item>
+<item historyLabel="EntriesDataSource.java" index="2">
+<position info="not_deleted" x="35" y="0"/>
+</item>
+<item historyLabel="EntriesDataSource.java" index="2">
+<position/>
+</item>
+<item active="true" historyLabel="EntriesDataSource.java" index="2">
+<position/>
+</item>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -325,5 +743,51 @@
 </trimArea>
 </trimLayout>
 </window>
-<mruList/>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="TraCare/AndroidManifest.xml">
+<persistable path="/TraCare/AndroidManifest.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Summary.java" tooltip="TraCare/src/ca/dillonyoung/tracare/Summary.java">
+<persistable path="/TraCare/src/ca/dillonyoung/tracare/Summary.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="styles.xml" tooltip="TraCare/res/values/styles.xml">
+<persistable path="/TraCare/res/values/styles.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SplashActivity.java" tooltip="TraCare/src/ca/dillonyoung/tracare/SplashActivity.java">
+<persistable path="/TraCare/src/ca/dillonyoung/tracare/SplashActivity.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="TraCare/src/ca/dillonyoung/tracare/Main.java">
+<persistable path="/TraCare/src/ca/dillonyoung/tracare/Main.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EntriesDataSource.java" tooltip="TraCare/src/ca/dillonyoung/tracare/EntriesDataSource.java">
+<persistable path="/TraCare/src/ca/dillonyoung/tracare/EntriesDataSource.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PreferencesDataSource.java" tooltip="TraCare/src/ca/dillonyoung/tracare/PreferencesDataSource.java">
+<persistable path="/TraCare/src/ca/dillonyoung/tracare/PreferencesDataSource.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="entries.xml" tooltip="TraCare/res/menu/entries.xml">
+<persistable path="/TraCare/res/menu/entries.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AddEntryActivity.java" tooltip="TraCare/src/ca/dillonyoung/tracare/AddEntryActivity.java">
+<persistable path="/TraCare/src/ca/dillonyoung/tracare/AddEntryActivity.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="addentry.xml" tooltip="TraCare/res/layout/addentry.xml">
+<persistable path="/TraCare/res/layout/addentry.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="entries_single.xml" tooltip="TraCare/res/menu/entries_single.xml">
+<persistable path="/TraCare/res/menu/entries_single.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="main.xml" tooltip="TraCare/res/menu/main.xml">
+<persistable path="/TraCare/res/menu/main.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" tooltip="TraCare/res/values/strings.xml">
+<persistable path="/TraCare/res/values/strings.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PreferencesActivity.java" tooltip="TraCare/src/ca/dillonyoung/tracare/PreferencesActivity.java">
+<persistable path="/TraCare/src/ca/dillonyoung/tracare/PreferencesActivity.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SummaryActivity.java" tooltip="TraCare/src/ca/dillonyoung/tracare/SummaryActivity.java">
+<persistable path="/TraCare/src/ca/dillonyoung/tracare/SummaryActivity.java"/>
+</file>
+</mruList>
 </workbench>

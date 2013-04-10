@@ -1,19 +1,13 @@
 package ca.dillonyoung.tracare;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Gallery;
 import android.widget.Spinner;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -21,6 +15,7 @@ import android.widget.Toast;
 
 public class AddEntryActivity extends Activity {
 
+	// Declare references
 	private Spinner spinHours;
 	private Spinner spinQualitySleep;
 	private Spinner spinEnergyLevel;

@@ -1,7 +1,5 @@
 package ca.dillonyoung.tracare;
 
-import java.sql.Date;
-
 public class Entries {
 
 	private int id;

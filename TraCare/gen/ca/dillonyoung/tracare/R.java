@@ -39,16 +39,13 @@ public final class R {
     }
     public static final class id {
         public static final int TableLayout1=0x7f0a0000;
-        public static final int action_settings=0x7f0a004f;
-        public static final int addEntry=0x7f0a004d;
+        public static final int action_settings=0x7f0a004c;
+        public static final int addEntry=0x7f0a004a;
+        public static final int btnEndDate=0x7f0a0048;
+        public static final int btnRunReport=0x7f0a0049;
         public static final int btnSave=0x7f0a0014;
-        public static final int button1=0x7f0a0047;
-        public static final int button2=0x7f0a0049;
-        public static final int button3=0x7f0a004a;
-        public static final int button4=0x7f0a004b;
-        public static final int button5=0x7f0a004c;
-        public static final int deleteEntry=0x7f0a004e;
-        public static final int editText1=0x7f0a0048;
+        public static final int btnStartDate=0x7f0a0047;
+        public static final int deleteEntry=0x7f0a004b;
         public static final int galleryEntries=0x7f0a0015;
         public static final int imgLogo=0x7f0a0046;
         public static final int radFemale=0x7f0a002d;
@@ -136,6 +133,7 @@ public final class R {
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
         public static final int blank=0x7f060015;
+        public static final int enddate=0x7f06001a;
         public static final int female=0x7f060008;
         public static final int gender=0x7f060006;
         public static final int image=0x7f060014;
@@ -143,13 +141,16 @@ public final class R {
         public static final int menu_add_entry=0x7f060016;
         public static final int menu_delete_entry=0x7f060017;
         public static final int preferences=0x7f06000a;
-        public static final int saveentry=0x7f06001d;
+        public static final int runreport=0x7f06001b;
+        public static final int saveentry=0x7f060021;
         public static final int savesettings=0x7f060011;
-        public static final int string_fitness=0x7f06001a;
-        public static final int string_hours_of_sleep=0x7f060019;
-        public static final int string_new_entry=0x7f060018;
-        public static final int string_nutrition=0x7f06001b;
-        public static final int string_symtpom_description=0x7f06001c;
+        public static final int startdate=0x7f060019;
+        public static final int string_fitness=0x7f06001e;
+        public static final int string_hours_of_sleep=0x7f06001d;
+        public static final int string_new_entry=0x7f06001c;
+        public static final int string_nutrition=0x7f06001f;
+        public static final int string_symtpom_description=0x7f060020;
+        public static final int summary=0x7f060018;
         public static final int title_section1=0x7f060002;
         public static final int title_section2=0x7f060003;
         public static final int title_section3=0x7f060004;

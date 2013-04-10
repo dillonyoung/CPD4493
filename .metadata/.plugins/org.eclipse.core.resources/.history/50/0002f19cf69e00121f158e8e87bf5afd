@@ -1,0 +1,142 @@
+package ca.dillonyoung.tracare;
+
+import java.text.DecimalFormat;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Switch;
+import android.widget.Toast;
+
+public class PreferencesActivity extends Activity {
+
+	// Create the references for the widgets
+	private EditText txtUserName;
+	private EditText txtUserWeight;
+	private RadioButton radMale;
+	private RadioButton radFemale;
+	private Switch switchWeight;
+	private Switch switchSleep;
+	private Switch switchEnergyLevel;
+	private Switch switchFitness;
+	private Switch switchNutrition;
+	private Switch switchSymptom;
+	private Button btnSave;
+
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.preferences);
+
+		// Associate the widgets with the references
+		txtUserName = (EditText) findViewById(R.id.txtUserName);
+		txtUserWeight = (EditText) findViewById(R.id.txtUserWeight);
+		radMale = (RadioButton) findViewById(R.id.radMale);
+		radFemale = (RadioButton) findViewById(R.id.radFemale);
+		switchWeight = (Switch) findViewById(R.id.switchWeight);
+		switchSleep = (Switch) findViewById(R.id.switchSleep);
+		switchEnergyLevel = (Switch) findViewById(R.id.switchEnergyLevel);
+		switchFitness = (Switch) findViewById(R.id.switchFitness);
+		switchNutrition = (Switch) findViewById(R.id.switchNutrition);
+		switchSymptom = (Switch) findViewById(R.id.switchSymptom);
+		btnSave = (Button) findViewById(R.id.btnSave);
+
+		// Update the check state for the switches
+		switchWeight.setChecked(Main.preferences.getWeight());
+		switchSleep.setChecked(Main.preferences.getSleep());
+		switchEnergyLevel.setChecked(Main.preferences.getEnergyLevel());
+		switchFitness.setChecked(Main.preferences.getFitness());
+		switchNutrition.setChecked(Main.preferences.getNutrition());
+		switchSymptom.setChecked(Main.preferences.getSymptom());
+
+		// Update the user details
+		DecimalFormat format = new DecimalFormat("###.00");
+		txtUserName.setText(Main.userdetails.getName());
+		txtUserWeight.setText(format.format(Main.userdetails.getWeight()));
+		if (Main.userdetails.getGender() == 1) {
+			radMale.setChecked(true);
+		} else {
+			radFemale.setChecked(true);
+		}
+
+		// Set the on click listener for the save button
+		btnSave.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+
+				// Check to see if the user name has not been entered
+				if (txtUserName.getText().toString().equals("")) {
+
+					// Create a toast message to inform the user the name is not
+					// entered
+					Toast.makeText(getBaseContext(),
+							"The user name can not be blank",
+							Toast.LENGTH_SHORT).show();
+					return;
+				}
+
+				// Check to see if the weight value has been entered
+				if (txtUserWeight.getText().toString().length() == 0) {
+
+					// Create a toast message to inform the user the weight is
+					// not valid
+					Toast.makeText(getBaseContext(),
+							"The weight value is not valid",
+							Toast.LENGTH_SHORT).show();
+					return;
+				}
+
+				// Check to see if the weight has not been entered
+				if (Float.parseFloat(txtUserWeight.getText().toString()) < 1.0) {
+
+					// Create a toast message to inform the user the weight is
+					// not valid
+					Toast.makeText(getBaseContext(),
+							"The weight value is not valid", Toast.LENGTH_SHORT)
+							.show();
+					return;
+				}
+
+				// Gather the preference information
+				Preferences preferences = new Preferences();
+				preferences.setWeight(switchWeight.isChecked());
+				preferences.setSleep(switchSleep.isChecked());
+				preferences.setEnergyLevel(switchEnergyLevel.isChecked());
+				preferences.setFitness(switchFitness.isChecked());
+				preferences.setNutrition(switchNutrition.isChecked());
+				preferences.setSymptom(switchSymptom.isChecked());
+
+				// Save the changes to the preferences
+				Main.datasourcePreferences.savePreferences(preferences);
+				Main.preferences = preferences;
+
+				// Gather the user detail information
+				UserDetails userdetails = new UserDetails();
+				userdetails.setName(txtUserName.getText().toString());
+				if (radMale.isChecked()) {
+					userdetails.setGender(1);
+				} else {
+					userdetails.setGender(2);
+				}
+				userdetails.setWeight(Float.parseFloat(txtUserWeight.getText()
+						.toString()));
+
+				// Save the changes to the user details
+				Main.dataSourceUserDetails.saveUserDetails(userdetails);
+				Main.userdetails = userdetails;
+
+				// Create a toast message to inform the user the settings
+				// have been saved
+				Toast.makeText(getBaseContext(),
+						"The settings have been saved", Toast.LENGTH_SHORT)
+						.show();
+			}
+		});
+	}
+}

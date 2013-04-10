@@ -1,0 +1,79 @@
+package ca.dillonyoung.tracare;
+
+import java.util.Calendar;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+public class SummaryActivity extends Activity {
+
+	// Declare variables
+	private int startDateYear;
+	private int startDateMonth;
+	private int startDateDay;
+	private int endDateYear;
+	private int endDateMonth;
+	private int endDateDay;
+	static final int DATE_DIALOG_ID = 0;
+	
+	// Declare references
+	private Button btnRunReport;
+	private Button btnStartDate;
+	private Button btnEndDate;
+	
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.summary);
+		
+		// Create a reference to the run report button
+		btnRunReport = (Button) findViewById(R.id.btnRunReport);
+		
+		// Create a reference to the start date button
+		btnStartDate = (Button) findViewById(R.id.btnStartDate);
+		
+		// Create a reference to the end date button
+		btnEndDate = (Button) findViewById(R.id.btnEndDate);
+		
+		// Create an instance of the calendar class
+		final Calendar c = Calendar.getInstance();
+		
+		// Get the date values for the end date and store them in the variables
+		endDateYear = c.get(Calendar.YEAR);
+		endDateMonth = c.get(Calendar.MONTH);
+		endDateDay = c.get(Calendar.DAY_OF_MONTH);
+		
+		// Get the date values for the start date and store them in the variables
+		c.add(Calendar.DAY_OF_MONTH, -7);
+		startDateYear = c.get(Calendar.YEAR);
+		startDateMonth = c.get(Calendar.MONTH);
+		startDateYear = c.get(Calendar.DAY_OF_MONTH);
+		
+		// Create and associate the start date button on click listener
+		btnStartDate.setOnClickListener(new View.OnClickListener() {
+			
+			@SuppressWarnings("deprecation")
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+				// Show the date dialog
+				showDialog(DATE_DIALOG_ID);
+			}
+		});
+		
+		// Create and associate the end date button on click listener
+		btnEndDate.setOnClickListener(new View.OnClickListener() {
+			
+			@SuppressWarnings("deprecation")
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+				// Show the date dialog
+				showDialog(DATE_DIALOG_ID);
+			}
+		});
+	}
+}

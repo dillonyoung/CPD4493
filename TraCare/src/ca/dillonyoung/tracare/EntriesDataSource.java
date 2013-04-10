@@ -1,7 +1,7 @@
 package ca.dillonyoung.tracare;
 
-import java.sql.Date;
 import java.util.ArrayList;
+import java.util.Date;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -39,8 +39,6 @@ public class EntriesDataSource {
 			
 			Entries entry = new Entries();
 			entry.setId(cursor.getInt(0));
-			//long msTime = System.currentTimeMillis();
-			//Date curDate = new Date(msTime);
 			entry.setDateEntered(cursor.getLong(1));
 			entry.setLocation(cursor.getInt(2));
 			entry.setWeight(cursor.getFloat(3));

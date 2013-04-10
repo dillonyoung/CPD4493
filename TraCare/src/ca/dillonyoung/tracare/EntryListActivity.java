@@ -1,29 +1,26 @@
 package ca.dillonyoung.tracare;
 
 import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.AudioRecord.OnRecordPositionUpdateListener;
 import android.os.Bundle;
 import android.text.format.DateFormat;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Gallery;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+@SuppressWarnings("deprecation")
 public class EntryListActivity extends Activity {
 
 	public static ArrayList<Entries> entries;

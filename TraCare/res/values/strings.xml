@@ -25,6 +25,10 @@
     <string name="blank"></string>
     <string name="menu_add_entry">Add Entry</string>
     <string name="menu_delete_entry">Delete Entry</string>
+    <string name="summary">Summary Report</string>
+    <string name="startdate">Start Date</string>
+    <string name="enddate">End Date</string>
+    <string name="runreport">Run Report</string>
 
     <string-array name="hours_of_sleep">
         <item>0.0 Hours of Sleep</item>

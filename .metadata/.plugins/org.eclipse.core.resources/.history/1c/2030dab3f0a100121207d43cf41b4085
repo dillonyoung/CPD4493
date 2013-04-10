@@ -1,0 +1,43 @@
+package ca.dillonyoung.tracare;
+
+import java.util.Calendar;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+
+public class SummaryActivity extends Activity {
+
+	// Declare variables
+	private int currentYear;
+	private int currentMonth;
+	private int currentDay;
+	static final int DATE_DIALOG_ID = 0;
+	
+	// Declare references
+	private Button btnRunReport;
+	private Button btnStartDate;
+	private Button btnEndDate;
+	
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.summary);
+		
+		// Create a reference to the run report button
+		btnRunReport = (Button) findViewById(R.id.btnRunReport);
+		
+		// Create a reference to the start date button
+		btnStartDate = (Button) findViewById(R.id.btnStartDate);
+		
+		// Create a reference to the end date button
+		btnEndDate = (Button) findViewById(R.id.btnEndDate);
+		
+		// Create an instance of the calendar class
+		final Calendar c = Calendar.getInstance();
+		
+		// Get the current date values and store them in the variables
+		currentYear = c.get(Calendar.YEAR);
+		currentMonth = c.get(Calendar.MONTH);
+		currentDay = c.get(Calendar.DAY_OF_MONTH);
+	}
+}

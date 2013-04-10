@@ -1,7 +1,0 @@
-package ca.dillonyoung.tracare;
-
-import android.app.Activity;
-
-public class EntryListActivity extends Activity {
-
-}
