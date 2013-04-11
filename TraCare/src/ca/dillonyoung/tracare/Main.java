@@ -7,14 +7,11 @@ package ca.dillonyoung.tracare;
 
 // Include required imports
 import java.util.ArrayList;
-
 import android.app.AlertDialog;
 import android.app.TabActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-
-import android.util.Log;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
@@ -36,10 +33,15 @@ public class Main extends TabActivity {
 	public static EntriesDataSource datasourceEntries;
 	public static ArrayList<Entries> entries;
 
-	/** Called when the activity is first created. */
+	
+	/**
+	 * The onCreate method for the Main class
+	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		// Set the layout for the activity
 		setContentView(R.layout.main);
 
 		// Set the preference data source and load the data
@@ -102,16 +104,14 @@ public class Main extends TabActivity {
 		if (MySQLiteHelper.firstRun) {
 			
 			// Build the alert dialog
-			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-					this);
+			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 
 			// Set dialog title
 			alertDialogBuilder.setTitle("First Run");
 
 			// Set the dialog message
 			alertDialogBuilder
-					.setMessage(
-							"Since this is the first time running the application please configure the user details.")
+					.setMessage("Since this is the first time running the application please configure the user details.")
 					.setCancelable(false)
 					.setPositiveButton("OK",
 							new DialogInterface.OnClickListener() {
@@ -132,6 +132,10 @@ public class Main extends TabActivity {
 		}
 	}
 
+	
+	/**
+	 * The onResume method for the Main class
+	 */
 	protected void onResume() {
 
 		// Open the data sources when the activity resumes
@@ -140,12 +144,15 @@ public class Main extends TabActivity {
 		super.onResume();
 	}
 
+	
+	/**
+	 * The onPause method for the Main class
+	 */
 	protected void onPause() {
 
 		// Close the data sources when the activity is paused
 		datasourcePreferences.close();
 		dataSourceUserDetails.close();
 		super.onPause();
-		Log.v("TraCare", "Pause");
 	}
 }

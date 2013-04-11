@@ -15,6 +15,10 @@ import android.widget.ImageView;
 
 public class SplashActivity extends Activity {
 
+	
+	/**
+	 * The onCreate method for the SplashActivity class
+	 */
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
@@ -29,11 +33,15 @@ public class SplashActivity extends Activity {
 				R.anim.alpha));
 	}
 	
+	
+	/**
+	 * The onResume method for the SplashActivity class
+	 */
 	public void onResume() {
 		
 		super.onResume();
 		
-		// Start the main activity
+		// Create a handler to delay the start up of the main activity
 		Handler handler = new Handler(); 
 		
 		handler.postDelayed(new Runnable() {
@@ -41,6 +49,8 @@ public class SplashActivity extends Activity {
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
+				
+				// Start the main activity
 				Intent intent = new Intent(SplashActivity.this, Main.class);
 				startActivity(intent);
 			} 

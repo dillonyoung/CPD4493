@@ -8,7 +8,6 @@ package ca.dillonyoung.tracare;
 // Include required imports
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -32,6 +31,10 @@ public class AddEntryActivity extends Activity {
 	private TextView txtSymptomDescription;
 	private Button btnSave;
 	
+	
+	/**
+	 * The onCreate method for the AddEntryActivity class
+	 */
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
@@ -132,6 +135,7 @@ public class AddEntryActivity extends Activity {
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				
+				// Declare variables
 				float weight;
 				float sleep;
 				float qualityofsleep;
@@ -215,10 +219,10 @@ public class AddEntryActivity extends Activity {
 					symptomdescription = "<{[blank]}>";
 				}
 				
-				
 				// Create a new entry object
 				Entries entry = new Entries();
 				
+				// Update the entry with the values
 				entry.setDateEntered(System.currentTimeMillis());
 				entry.setLocation(0);
 				entry.setWeight(weight);
@@ -240,70 +244,70 @@ public class AddEntryActivity extends Activity {
 	}
 }
 
+
+/**
+ * The class for the spinHours spinner
+ */
 class spinHoursOnItemSelectedListener implements OnItemSelectedListener {
 
 	@Override
-	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
-			long arg3) {
+	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 		// TODO Auto-generated method stub
-		Log.v("TraCare", arg0.getItemAtPosition(arg2).toString());
-		
 	}
 
 	@Override
 	public void onNothingSelected(AdapterView<?> arg0) {
 		// TODO Auto-generated method stub
-		
 	}
 }
 
+
+/**
+ * The class for the spinQualitySleep spinner
+ */
 class spinQualitySleepOnItemSelectedListener implements OnItemSelectedListener {
 
 	@Override
-	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
-			long arg3) {
+	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 		// TODO Auto-generated method stub
-		Log.v("TraCare", arg0.getItemAtPosition(arg2).toString());
-		
 	}
 
 	@Override
 	public void onNothingSelected(AdapterView<?> arg0) {
 		// TODO Auto-generated method stub
-		
 	}
 }
 
+
+/**
+ * The class for the spinEnergyLevel spinner
+ */
 class spinEnergyLevelOnItemSelectedListener implements OnItemSelectedListener {
 
 	@Override
-	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
-			long arg3) {
+	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 		// TODO Auto-generated method stub
-		Log.v("TraCare", arg0.getItemAtPosition(arg2).toString());
-		
 	}
 
 	@Override
 	public void onNothingSelected(AdapterView<?> arg0) {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub	
 	}
 }
 
+
+/**
+ * The class for the spinSymptomType spinner
+ */
 class spinSymptomTypeOnItemSelectedListener implements OnItemSelectedListener {
 
 	@Override
-	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
-			long arg3) {
+	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 		// TODO Auto-generated method stub
-		Log.v("TraCare", arg0.getItemAtPosition(arg2).toString());
-		
 	}
 
 	@Override
 	public void onNothingSelected(AdapterView<?> arg0) {
 		// TODO Auto-generated method stub
-		
 	}
 }

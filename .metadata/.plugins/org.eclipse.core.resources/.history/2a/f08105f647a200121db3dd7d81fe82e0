@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Gallery
+        android:id="@+id/galleryEntries"
+        style="@style/button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:minHeight="40sp"
+        android:scrollbars="horizontal"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:spacing="100sp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TableLayout
+            android:id="@+id/TableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/rowEntryWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <TextView
+                    android:id="@+id/txtEntryWeight"
+                    style="@style/label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blank" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowEntryHoursSleep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <TextView
+                    android:id="@+id/txtEntryHoursSleep"
+                    style="@style/label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blank" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowEntryQualitySleep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <TextView
+                    android:id="@+id/txtEntryQualitySleep"
+                    style="@style/label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blank" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowEntryEnergyLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <TextView
+                    android:id="@+id/txtEntryEnergyLevel"
+                    style="@style/label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blank" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowEntryFitness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <TextView
+                    android:id="@+id/txtEntryFitness"
+                    style="@style/label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="4"
+                    android:text="@string/blank" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowEntryNutrition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <TextView
+                    android:id="@+id/txtEntryNutrition"
+                    style="@style/label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="4"
+                    android:text="@string/blank" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowEntrySymptom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <TextView
+                    android:id="@+id/txtEntrySymptom"
+                    style="@style/label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blank" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowEntrySymptomDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <TextView
+                    android:id="@+id/txtEntrySymptomDescription"
+                    style="@style/label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="4"
+                    android:text="@string/blank" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>

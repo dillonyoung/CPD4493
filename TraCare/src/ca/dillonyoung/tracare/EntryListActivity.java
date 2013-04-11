@@ -24,12 +24,15 @@ import android.widget.ArrayAdapter;
 import android.widget.Gallery;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 @SuppressWarnings("deprecation")
 public class EntryListActivity extends Activity {
 
+	// Declare list of entries
 	public static ArrayList<Entries> entries;
 
+	// Create the references for the widgets
 	private Gallery galleryEntries;
 	private TextView txtEntryWeight;
 	private TextView txtEntryHoursSleep;
@@ -40,14 +43,20 @@ public class EntryListActivity extends Activity {
 	private TextView txtEntrySymptom;
 	private TextView txtEntrySymptomDescription;
 	
+	// Declare variables
 	private int entryIndex;
 
+	
+	/**
+	 * The onCreate method for the EntryListActivity class
+	 */
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
 		// Set the layout for the activity
 		setContentView(R.layout.entrylist);
 
+		// Associate the references with the widgets
 		galleryEntries = (Gallery) findViewById(R.id.galleryEntries);
 		txtEntryWeight = (TextView) findViewById(R.id.txtEntryWeight);
 		txtEntryHoursSleep = (TextView) findViewById(R.id.txtEntryHoursSleep);
@@ -59,26 +68,34 @@ public class EntryListActivity extends Activity {
 		txtEntrySymptomDescription = (TextView) findViewById(R.id.txtEntrySymptomDescription);
 	}
 
+	
+	/**
+	 * The onResume method for the EntryListActivity class
+	 */
 	public void onResume() {
 
 		super.onResume();
 
+		// Reset the gallery view
 		galleryEntries.setAdapter(null);
 		galleryEntries.setOnItemSelectedListener(null);
 
+		// Get the list of entries
 		entries = Main.datasourceEntries.getEntries();
 		ArrayList<String> entryDate = new ArrayList<String>();
 
+		// Loop through the entries and add the date to the array
 		for (int i = 0; i < entries.size(); i++) {
 			Date curDate = new Date(entries.get(i).getDateEntered());
-			entryDate.add(DateFormat
-					.format("MMMM d, yyyy hh:mm:ss aa", curDate).toString());
+			entryDate.add(DateFormat.format("MMMM d, yyyy hh:mm:ss aa", curDate).toString());
 		}
 
+		// Check to see if there were no entries
 		if (entries.size() == 0) {
 			txtEntryWeight.setText("There are currently no entries");
 		}
 
+		@SuppressWarnings("unchecked")
 		ArrayAdapter arrayAdapter = new ArrayAdapter(this,
 				android.R.layout.simple_gallery_item, entryDate.toArray());
 
@@ -91,14 +108,10 @@ public class EntryListActivity extends Activity {
 
 				// Get the arrays of strings
 				entryIndex = arg2;
-				String[] hourssleep = getResources().getStringArray(
-						R.array.hours_of_sleep);
-				String[] qualityofsleep = getResources().getStringArray(
-						R.array.quality_of_sleep);
-				String[] energylevel = getResources().getStringArray(
-						R.array.energy_level);
-				String[] symptom = getResources().getStringArray(
-						R.array.symptom_type);
+				String[] hourssleep = getResources().getStringArray(R.array.hours_of_sleep);
+				String[] qualityofsleep = getResources().getStringArray(R.array.quality_of_sleep);
+				String[] energylevel = getResources().getStringArray(R.array.energy_level);
+				String[] symptom = getResources().getStringArray(R.array.symptom_type);
 
 				// Check to see if the weight was tracked for the entry
 				if (entries.get(entryIndex).getWeight() == -1 || entries.size() == 0) {
@@ -108,8 +121,7 @@ public class EntryListActivity extends Activity {
 					TableRow row = (TableRow) findViewById(R.id.rowEntryWeight);
 					row.setVisibility(View.VISIBLE);
 					txtEntryWeight.setText("Weight: "
-							+ String.format("%f", entries.get(entryIndex)
-									.getWeight()));
+							+ String.format("%f", entries.get(entryIndex).getWeight()));
 				}
 
 				// Check to see if the hours of sleep was tracked for the entry
@@ -119,20 +131,17 @@ public class EntryListActivity extends Activity {
 				} else {
 					TableRow row = (TableRow) findViewById(R.id.rowEntryHoursSleep);
 					row.setVisibility(View.VISIBLE);
-					txtEntryHoursSleep.setText(hourssleep[(int) entries.get(
-							entryIndex).getHoursSleep()]);
+					txtEntryHoursSleep.setText(hourssleep[(int) entries.get(entryIndex).getHoursSleep()]);
 				}
 
-				// Check to see if the quality of sleep was tracked for the
-				// entry
+				// Check to see if the quality of sleep was tracked for the entry
 				if (entries.get(entryIndex).getQualityOfSleep() == -1 || entries.size() == 0) {
 					TableRow row = (TableRow) findViewById(R.id.rowEntryQualitySleep);
 					row.setVisibility(View.GONE);
 				} else {
 					TableRow row = (TableRow) findViewById(R.id.rowEntryQualitySleep);
 					row.setVisibility(View.VISIBLE);
-					txtEntryQualitySleep.setText(qualityofsleep[(int) entries
-							.get(entryIndex).getQualityOfSleep()]);
+					txtEntryQualitySleep.setText(qualityofsleep[(int) entries.get(entryIndex).getQualityOfSleep()]);
 				}
 
 				// Check to see if the energy level was tracked for the entry
@@ -142,12 +151,10 @@ public class EntryListActivity extends Activity {
 				} else {
 					TableRow row = (TableRow) findViewById(R.id.rowEntryEnergyLevel);
 					row.setVisibility(View.VISIBLE);
-					txtEntryEnergyLevel.setText(energylevel[(int) entries.get(
-							entryIndex).getEnergyLevel()]);
+					txtEntryEnergyLevel.setText(energylevel[(int) entries.get(entryIndex).getEnergyLevel()]);
 				}
 
-				// Check to see if the fitness activity was tracked for the
-				// entry
+				// Check to see if the fitness activity was tracked for the entry
 				if (entries.get(entryIndex).getFitness().equals("<{[blank]}>") || entries.size() == 0) {
 					TableRow row = (TableRow) findViewById(R.id.rowEntryFitness);
 					row.setVisibility(View.GONE);
@@ -155,18 +162,26 @@ public class EntryListActivity extends Activity {
 					TableRow row = (TableRow) findViewById(R.id.rowEntryFitness);
 					row.setVisibility(View.VISIBLE);
 					txtEntryFitness.setText(entries.get(entryIndex).getFitness());
+					
+					// Check to see if the fitness activity is blank
+					if (txtEntryFitness.getText().equals("")) {
+						txtEntryFitness.setText("Fitness activity was not entered");
+					}
 				}
 
 				// Check to see if the nutrition was tracked for the entry
-				if (entries.get(entryIndex).getNutrition()
-						.equals("<{[blank]}>") || entries.size() == 0) {
+				if (entries.get(entryIndex).getNutrition().equals("<{[blank]}>") || entries.size() == 0) {
 					TableRow row = (TableRow) findViewById(R.id.rowEntryNutrition);
 					row.setVisibility(View.GONE);
 				} else {
 					TableRow row = (TableRow) findViewById(R.id.rowEntryNutrition);
 					row.setVisibility(View.VISIBLE);
-					txtEntryNutrition
-							.setText(entries.get(entryIndex).getNutrition());
+					txtEntryNutrition.setText(entries.get(entryIndex).getNutrition());
+					
+					// Check to see if the nutrition is blank
+					if (txtEntryNutrition.getText().equals("")) {
+						txtEntryNutrition.setText("Nutrition information was not entered");
+					}
 				}
 
 				// Check to see if the symptoms was tracked for the entry
@@ -180,10 +195,13 @@ public class EntryListActivity extends Activity {
 					row1.setVisibility(View.VISIBLE);
 					TableRow row2 = (TableRow) findViewById(R.id.rowEntrySymptomDescription);
 					row2.setVisibility(View.VISIBLE);
-					txtEntrySymptom.setText(symptom[(int) entries.get(entryIndex)
-							.getSymptom()]);
-					txtEntrySymptomDescription.setText(entries.get(entryIndex)
-							.getSymptomDescription());
+					txtEntrySymptom.setText(symptom[(int) entries.get(entryIndex).getSymptom()]);
+					txtEntrySymptomDescription.setText(entries.get(entryIndex).getSymptomDescription());
+				
+					// Check to see if the symptom description is blank
+					if (txtEntrySymptomDescription.getText().equals("")) {
+						txtEntrySymptomDescription.setText("Symptom description was not entered");
+					}
 				}
 			}
 
@@ -193,9 +211,14 @@ public class EntryListActivity extends Activity {
 
 			}
 
-		}); // new GalleryOnItemSelectedListener());
+		});
+		
+		galleryEntries.setSelection(entries.size() - 1, true);
 	}
 
+	/**
+	 * The onCreateOptionsMenu method for the EntryListActivity class
+	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
@@ -206,6 +229,10 @@ public class EntryListActivity extends Activity {
 		return true;
 	}
 
+	
+	/**
+	 * The onPrepareOptionsMenu method for the EntryListActivity class
+	 */
 	public boolean onPrepareOptionsMenu(Menu menu) {
 
 		// Check to see if the delete option should be shown
@@ -219,6 +246,10 @@ public class EntryListActivity extends Activity {
 		return true;
 	}
 
+	
+	/**
+	 * The onOptionsItemSelected method for the EntryListActivity class
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		System.err.println(item.getItemId());
@@ -265,6 +296,11 @@ public class EntryListActivity extends Activity {
 									txtEntrySymptomDescription.setText("");
 									
 									onResume();
+									
+									// Create a toast message to inform the user the entry was deleted
+									Toast.makeText(getBaseContext(),
+											"The entry has been deleted",
+											Toast.LENGTH_SHORT).show();
 								}
 							})
 					.setNegativeButton("No",

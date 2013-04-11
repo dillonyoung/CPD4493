@@ -10,9 +10,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:minHeight="40sp"
+        android:minHeight="50sp"
         android:scrollbars="horizontal"
-        android:scrollbarFadeDuration="0"
+        android:scrollbarFadeDuration="500"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
         android:spacing="100sp" />
 
     <ScrollView
@@ -32,7 +33,7 @@
 
                 <TextView
                     android:id="@+id/txtEntryWeight"
-                    style="@style/label"
+                    style="@style/value"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/blank" />
@@ -46,7 +47,7 @@
 
                 <TextView
                     android:id="@+id/txtEntryHoursSleep"
-                    style="@style/label"
+                    style="@style/value"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/blank" />
@@ -60,7 +61,7 @@
 
                 <TextView
                     android:id="@+id/txtEntryQualitySleep"
-                    style="@style/label"
+                    style="@style/value"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/blank" />
@@ -74,7 +75,7 @@
 
                 <TextView
                     android:id="@+id/txtEntryEnergyLevel"
-                    style="@style/label"
+                    style="@style/value"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/blank" />
@@ -88,7 +89,7 @@
 
                 <TextView
                     android:id="@+id/txtEntryFitness"
-                    style="@style/label"
+                    style="@style/value"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:lines="4"
@@ -103,7 +104,7 @@
 
                 <TextView
                     android:id="@+id/txtEntryNutrition"
-                    style="@style/label"
+                    style="@style/value"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:lines="4"
@@ -118,7 +119,7 @@
 
                 <TextView
                     android:id="@+id/txtEntrySymptom"
-                    style="@style/label"
+                    style="@style/value"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/blank" />
@@ -132,7 +133,7 @@
 
                 <TextView
                     android:id="@+id/txtEntrySymptomDescription"
-                    style="@style/label"
+                    style="@style/value"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:lines="4"

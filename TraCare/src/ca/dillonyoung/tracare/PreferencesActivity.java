@@ -31,6 +31,10 @@ public class PreferencesActivity extends Activity {
 	private Switch switchSymptom;
 	private Button btnSave;
 
+	
+	/**
+	 * The onCreate method for the PreferencesActivity class
+	 */
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
@@ -78,8 +82,7 @@ public class PreferencesActivity extends Activity {
 				// Check to see if the user name has not been entered
 				if (txtUserName.getText().toString().equals("")) {
 
-					// Create a toast message to inform the user the name is not
-					// entered
+					// Create a toast message to inform the user the name is not entered
 					Toast.makeText(getBaseContext(),
 							"The user name can not be blank",
 							Toast.LENGTH_SHORT).show();
@@ -89,8 +92,7 @@ public class PreferencesActivity extends Activity {
 				// Check to see if the weight value has been entered
 				if (txtUserWeight.getText().toString().length() == 0) {
 
-					// Create a toast message to inform the user the weight is
-					// not valid
+					// Create a toast message to inform the user the weight is not valid
 					Toast.makeText(getBaseContext(),
 							"The weight value is not valid",
 							Toast.LENGTH_SHORT).show();
@@ -100,8 +102,7 @@ public class PreferencesActivity extends Activity {
 				// Check to see if the weight has not been entered
 				if (Float.parseFloat(txtUserWeight.getText().toString()) < 1.0) {
 
-					// Create a toast message to inform the user the weight is
-					// not valid
+					// Create a toast message to inform the user the weight is not valid
 					Toast.makeText(getBaseContext(),
 							"The weight value is not valid", Toast.LENGTH_SHORT)
 							.show();
@@ -129,8 +130,7 @@ public class PreferencesActivity extends Activity {
 				} else {
 					userdetails.setGender(2);
 				}
-				userdetails.setWeight(Float.parseFloat(txtUserWeight.getText()
-						.toString()));
+				userdetails.setWeight(Float.parseFloat(txtUserWeight.getText().toString()));
 
 				// Save the changes to the user details
 				Main.dataSourceUserDetails.saveUserDetails(userdetails);

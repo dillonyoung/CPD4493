@@ -1,0 +1,271 @@
+package ca.dillonyoung.tracare;
+
+/**
+ * Filename: SummaryActivity.java
+ * Author..: Dillon Young (C0005790)
+ */
+
+// Include required imports
+import java.util.Calendar;
+import java.util.Locale;
+import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.Toast;
+
+public class SummaryActivity extends Activity {
+
+	// Declare variables
+	private int startDateYear;
+	private int startDateMonth;
+	private int startDateDay;
+	private int endDateYear;
+	private int endDateMonth;
+	private int endDateDay;
+	static final int START_DATE_DIALOG_ID = 0;
+	static final int END_DATE_DIALOG_ID = 1;
+	
+	// Declare references
+	private Button btnRunReport;
+	private Button btnStartDate;
+	private Button btnEndDate;
+	
+	
+	/**
+	 * The onCreate method for the SummaryActivity class
+	 */
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
+		// Set the layout for the activity
+		setContentView(R.layout.summary);
+		
+		// Create a reference to the run report button
+		btnRunReport = (Button) findViewById(R.id.btnRunReport);
+		
+		// Create a reference to the start date button
+		btnStartDate = (Button) findViewById(R.id.btnStartDate);
+		
+		// Create a reference to the end date button
+		btnEndDate = (Button) findViewById(R.id.btnEndDate);
+		
+		// Create an instance of the calendar class
+		Calendar c = Calendar.getInstance();
+		
+		// Get the date values for the end date and store them in the variables
+		endDateYear = c.get(Calendar.YEAR);
+		endDateMonth = c.get(Calendar.MONTH);
+		endDateDay = c.get(Calendar.DAY_OF_MONTH);
+		btnEndDate.setText(formatDate(endDateMonth, endDateDay, endDateYear));
+		
+		// Get the date values for the start date and store them in the variables
+		c.add(Calendar.DATE, -7);
+		startDateYear = c.get(Calendar.YEAR);
+		startDateMonth = c.get(Calendar.MONTH);
+		startDateDay = c.get(Calendar.DAY_OF_MONTH);
+		btnStartDate.setText(formatDate(startDateMonth, startDateDay, startDateYear));
+		
+		// Create and associate the start date button on click listener
+		btnStartDate.setOnClickListener(new View.OnClickListener() {
+			
+			@SuppressWarnings("deprecation")
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+				// Show the date dialog
+				showDialog(START_DATE_DIALOG_ID);
+			}
+		});
+		
+		// Create and associate the end date button on click listener
+		btnEndDate.setOnClickListener(new View.OnClickListener() {
+			
+			@SuppressWarnings("deprecation")
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+				// Show the date dialog
+				showDialog(END_DATE_DIALOG_ID);
+			}
+		});
+		
+		// Create and associate the run report button on click listener
+		btnRunReport.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+			   // Declare and configure the start date
+			   Calendar startCal = Calendar.getInstance();
+			   startCal.set(Calendar.MONTH, startDateMonth);
+			   startCal.set(Calendar.DAY_OF_MONTH, startDateDay);
+			   startCal.set(Calendar.YEAR, startDateYear);
+			   
+			   // Declare and configure the end date
+			   Calendar endCal = Calendar.getInstance();
+			   endCal.set(Calendar.MONTH, endDateMonth);
+			   endCal.set(Calendar.DAY_OF_MONTH, endDateDay);
+			   endCal.set(Calendar.YEAR, endDateYear);
+			   
+			   System.err.println(startDateMonth);
+		
+			   if (startCal.getTimeInMillis() >= endCal.getTimeInMillis()) {
+				   
+					// Create a toast message to inform the user the start date is not valid
+					Toast.makeText(getBaseContext(),
+							"The start date is not valid",
+							Toast.LENGTH_SHORT).show();
+				   return;
+			   }
+			   
+			   // Declare a reference to the Summary class
+			   Summary report = new Summary();
+			   
+			   // Update the start and end dates on the report
+			   report.setStartDate(startCal.getTimeInMillis());
+			   report.setEndDate(endCal.getTimeInMillis());
+			   
+			   // Loop through the entries
+			   for (int i = 0; i < Main.entries.size(); i++) {
+
+				   // Check to see if the entry is between the selected start and end dates
+				   if (Main.entries.get(i).getDateEntered() >= startCal.getTimeInMillis() && Main.entries.get(i).getDateEntered() <= endCal.getTimeInMillis()) {
+					   
+					   // Check to see if the weight is less than the lowest weight
+					   if (Main.entries.get(i).getWeight() < report.getLowestWeight()) {
+						   
+						   // Update the lowest weight details
+						   report.setLowestWeight(Main.entries.get(i).getWeight());
+						   report.setLowestDate(Main.entries.get(i).getDateEntered());
+					   }
+					   
+					   // Check to see if the weight is greater than the highest weight
+					   if (Main.entries.get(i).getWeight() > report.getHighestWeight()) {
+						   
+						   // Update the highest weight details
+						   report.setHighestWeight(Main.entries.get(i).getWeight());
+						   report.setHighestDate(Main.entries.get(i).getDateEntered());
+					   }
+					   
+					   // Update the average details
+					   report.setCount(report.getCount() + 1);
+					   report.setAverageWeight(report.getAverageWeight() + Main.entries.get(i).getWeight());
+				   }
+			   }
+			   
+			   // Calculate the average
+			   report.setAverageWeight(report.getAverageWeight() / report.getCount());
+			   
+			   // Check to see if no entries were found and set the displays to default values
+			   if (report.getCount() == 0) {
+				   report.setHighestDate(endCal.getTimeInMillis());
+				   report.setLowestDate(startCal.getTimeInMillis());
+				   report.setHighestWeight(0);
+				   report.setLowestWeight(0);
+				   report.setAverageWeight(0);
+			   }
+			   
+				// Create an Intent to launch the ReportActivity
+				Intent reportIntent = new Intent(SummaryActivity.this, ReportActivity.class);
+				
+				// Add the report data to the intent
+				reportIntent.putExtra("startdate", report.getStartDate());
+				reportIntent.putExtra("enddate", report.getEndDate());
+				reportIntent.putExtra("lowestweight", report.getLowestWeight());
+				reportIntent.putExtra("lowestdate", report.getLowestDate());
+				reportIntent.putExtra("highestweight", report.getHighestWeight());
+				reportIntent.putExtra("highestdate", report.getHighestDate());
+				reportIntent.putExtra("averageweight", report.getAverageWeight());
+				
+				// Start the activity
+				startActivity(reportIntent);
+			}
+		});
+	}
+	
+
+	/**
+	 * Creates a dialog based on the selected index
+	 */
+	protected Dialog onCreateDialog(int id) {
+		
+		// Check to see which dialog to display
+		switch (id) {
+		case START_DATE_DIALOG_ID:
+
+				// Display the start date picker dialog
+				return new DatePickerDialog(this, summaryStartDate, startDateYear, startDateMonth, startDateDay);
+
+		case END_DATE_DIALOG_ID:
+			
+			// Display the end date picker dialog
+			return new DatePickerDialog(this, summaryEndDate, endDateYear, endDateMonth, endDateDay);			
+		}
+		return null;
+	}
+	
+	
+	/**
+	 * Creates the listener for the start date picker dialog
+	 */
+	private DatePickerDialog.OnDateSetListener summaryStartDate = 
+			new DatePickerDialog.OnDateSetListener() {
+				
+				@Override
+				public void onDateSet(DatePicker view, int year, int monthOfYear,
+						int dayOfMonth) {
+					// TODO Auto-generated method stub
+
+					// Update the text on the button for the start date picker
+					btnStartDate.setText(formatDate(monthOfYear, dayOfMonth, year));
+				}
+	};
+	
+	
+	/**
+	 * Creates the listener for the end date picker dialog
+	 */
+	private DatePickerDialog.OnDateSetListener summaryEndDate = 
+			new DatePickerDialog.OnDateSetListener() {
+				
+				@Override
+				public void onDateSet(DatePicker view, int year, int monthOfYear,
+						int dayOfMonth) {
+					// TODO Auto-generated method stub
+
+					// Update the text on the button for the end date picker
+					btnEndDate.setText(formatDate(monthOfYear, dayOfMonth, year));
+				}
+	};
+	
+	/**
+	 * Builds a formatted string based on a month, day and year
+	 * @param month The number value of a month
+	 * @param day The number value of a day
+	 * @param year The number value of a year
+	 * @return Returns the formatted string
+	 */
+	private String formatDate(int month, int day, int year) {
+		
+		// Get a calendar based on the supplied day, month and year
+		Calendar c = Calendar.getInstance();
+		c.set(Calendar.MONTH, month);
+		c.set(Calendar.DAY_OF_MONTH, day);
+		c.set(Calendar.YEAR, year);
+		
+		// Build the formatted string
+		String value = c.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.US) +
+				" " + day + ", " + year;
+		
+		// Return the formatted string
+		return value;
+	}
+}

@@ -27,6 +27,10 @@ public class ReportActivity extends Activity {
 	private TextView txtAverageWeight;
 	private Button btnBack;
 	
+	
+	/**
+	 * The onCreate method for the ReportActivity class
+	 */
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
@@ -41,7 +45,6 @@ public class ReportActivity extends Activity {
 		txtHighestWeight = (TextView) findViewById(R.id.txtReportHighestWeight);
 		txtHighestDate = (TextView) findViewById(R.id.txtReportHighestDate);
 		txtAverageWeight = (TextView) findViewById(R.id.txtReportAverageWeight);
-		
 		btnBack = (Button) findViewById(R.id.btnBack);
 		
 		// Create the number formatter

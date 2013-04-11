@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.Toast;
 
 public class SummaryActivity extends Activity {
 
@@ -34,6 +35,10 @@ public class SummaryActivity extends Activity {
 	private Button btnStartDate;
 	private Button btnEndDate;
 	
+	
+	/**
+	 * The onCreate method for the SummaryActivity class
+	 */
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
@@ -110,6 +115,15 @@ public class SummaryActivity extends Activity {
 			   endCal.set(Calendar.DAY_OF_MONTH, endDateDay);
 			   endCal.set(Calendar.YEAR, endDateYear);
 		
+			   if (startCal.getTimeInMillis() >= endCal.getTimeInMillis()) {
+				   
+					// Create a toast message to inform the user the start date is not valid
+					Toast.makeText(getBaseContext(),
+							"The start date can not be after the end date",
+							Toast.LENGTH_SHORT).show();
+				   return;
+			   }
+			   
 			   // Declare a reference to the Summary class
 			   Summary report = new Summary();
 			   
@@ -176,6 +190,9 @@ public class SummaryActivity extends Activity {
 	}
 	
 
+	/**
+	 * Creates a dialog based on the selected index
+	 */
 	protected Dialog onCreateDialog(int id) {
 		
 		// Check to see which dialog to display
@@ -193,6 +210,10 @@ public class SummaryActivity extends Activity {
 		return null;
 	}
 	
+	
+	/**
+	 * Creates the listener for the start date picker dialog
+	 */
 	private DatePickerDialog.OnDateSetListener summaryStartDate = 
 			new DatePickerDialog.OnDateSetListener() {
 				
@@ -203,9 +224,18 @@ public class SummaryActivity extends Activity {
 
 					// Update the text on the button for the start date picker
 					btnStartDate.setText(formatDate(monthOfYear, dayOfMonth, year));
+					
+					// Update the start date values
+					startDateDay = dayOfMonth;
+					startDateMonth = monthOfYear;
+					startDateYear = year;
 				}
 	};
 	
+	
+	/**
+	 * Creates the listener for the end date picker dialog
+	 */
 	private DatePickerDialog.OnDateSetListener summaryEndDate = 
 			new DatePickerDialog.OnDateSetListener() {
 				
@@ -216,6 +246,11 @@ public class SummaryActivity extends Activity {
 
 					// Update the text on the button for the end date picker
 					btnEndDate.setText(formatDate(monthOfYear, dayOfMonth, year));
+					
+					// Update the end date values
+					endDateDay = dayOfMonth;
+					endDateMonth = monthOfYear;
+					endDateYear = year;
 				}
 	};
 	

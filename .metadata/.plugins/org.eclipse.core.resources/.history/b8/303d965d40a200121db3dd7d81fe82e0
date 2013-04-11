@@ -1,0 +1,62 @@
+package ca.dillonyoung.tracare;
+
+/**
+ * Filename: Preferences.java
+ * Author..: Dillon Young (C0005790)
+ */
+
+public class Preferences {
+
+	private boolean weight;
+	private boolean sleep;
+	private boolean energy_level;
+	private boolean quality_of_sleep;
+	private boolean fitness;
+	private boolean nutrition;
+	private boolean symptom;
+	
+	public boolean getWeight() {
+		return weight;
+	}
+	public void setWeight(boolean weight) {
+		this.weight = weight;
+	}	
+	public boolean getSleep() {
+		return sleep;
+	}
+	public void setSleep(boolean sleep) {
+		this.sleep = sleep;
+	}
+	public boolean getEnergyLevel() {
+		return energy_level;
+	}
+	public void setEnergyLevel(boolean energy_level) {
+		this.energy_level = energy_level;
+	}
+	public boolean getQualityOfSleep() {
+		return quality_of_sleep;
+	}
+	public void setQualityOfSleep(boolean quality_of_sleep) {
+		this.quality_of_sleep = quality_of_sleep;
+	}
+	public boolean getFitness() {
+		return fitness;
+	}
+	public void setFitness(boolean fitness) {
+		this.fitness = fitness;
+	}
+	public boolean getNutrition() {
+		return nutrition;
+	}
+	public void setNutrition(boolean nutrition) {
+		this.nutrition = nutrition;
+	}
+	public boolean getSymptom() {
+		return symptom;
+	}
+	public void setSymptom(boolean symptom) {
+		this.symptom = symptom;
+	}
+
+	
+}
